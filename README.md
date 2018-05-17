@@ -12,6 +12,6 @@ Hello!
 
 
 
-## 20180518
+## 2018051
 * class
-* function
+* list
