@@ -5,6 +5,6 @@
 ### NEW doc
 Hello!
 
-# HTML5
-# CSS3
-# jQuery
+* HTML5
+* CSS3
+* jQuery
