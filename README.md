@@ -2,7 +2,7 @@
 
 ## 20180517
 
-### NEW doc
+### NEW docs
 Hello!
 
 * HTML5
