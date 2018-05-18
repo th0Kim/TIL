@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>빛나는 효과 따라하기</title>
+		<style>
+			body{
+				font-family: sans-serif;
+				margin: 0;
+				background-color: #000;
+			}
+			a{
+				text-decoration: none;
+			}
+			nav{
+				overflow: hidden;
+				text-align: center;
+			}
+			nav a{
+				position: relative;
+				z-index: 10;
+				display: inline-block;
+				margin: 1rem;
+				transition: color 0.4s;
+				color: #fff;
+			}
+			nav::after{
+				content:'';
+				display: block;
+				margin-top: -1px;
+				border-bottom: 1px solid #ddd;
+			} /* 원문의 작성자는 div로 사용하였다 */
+
+			/* opacity 효과 추가 */
+			nav a::before, nav a::after{
+				position: absolute;
+				bottom: -5rem; /* nav a::before의 높이 4rem + nav a의 margin 1rem; */
+				left: 50%;
+				display: block;
+				width: 4rem;
+				height: 4rem;
+				content: '';
+				transition: opacity 0.4s;
+				transform: translateX(-50%);
+				opacity: 0;
+
+			}
+			nav a::before {
+				box-shadow: 0 0 4rem 1px #fff;
+			}
+			nav a::after{
+				box-shadow: 0 1rem 1rem 0.75rem peru;
+			}
+			/*  active 될 때 opacity */
+			nav a.active::before, nav a.active::after{
+				opacity: 1;
+			}
+
+			nav a:not(.active):hover{
+				color: peachpuff;
+			}
+			.title{
+				font-weight: 700;
+				margin-right: 4rem;
+			}
+			.bg{
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				width: 100vw; /*1VW = 디바이스 넓이의 1/100, 100vw = 100% */
+				height: 100vh; /*1VH = 디바이스 높이의 1/100, 100vh = 100% */
+				opacity: 0.4;
+				background: url(bgimg.jpg) no-repeat 50% 50%;
+				background-size: cover;
+			}
+			/* vw/vh는 하위 호환성 문제가 생김으로 width: 64px; width: 19.4vw; 식으로 두가지로 작성한다.*/
+			.olgin{text-align: center;}
+			.olgin a{color: #fff; font-size: 14px;}
+			
+			@media screen and (max-width: 640px){
+				.title{display: block;margin-right: 1rem;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg"></div><!--bgimg.jpg 배경 -->
+		<nav>
+			<a href="" onclick="return false" class="title">빛나는 네비게이션 바</a>
+			<a href="#" class="active">자꾸</a>
+			<a href="#">아찔한</a>
+			<a href="#">이</a>
+			<a href="#">느낌</a>
+		</nav>
+
+		<br />
+		<br />
+		<div class="olgin"><a href="https://codepen.io/anon/pen/XEJwrO">원문 링크</a></div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$('nav a').click(function(){
+					$('nav a').removeClass('active');
+					$(this).addClass('active');
+
+					return false;
+				})
+			})
+		</script>
+	</body>
+</html>
