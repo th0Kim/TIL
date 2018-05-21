@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3 flex</title>
+	<style>
+		*{margin: 0; padding: 0; font-family: sans-serif;}
+		ol, ul, li{list-style: none;}
+		.wrap{margin: 0 20px;}
+		.page-wrap{
+			display: flex; /* div를 좌측(기본값) 정렬 시켜줌 ie10 아래 사용 x */
+			flex-wrap: nowrap; /* 반응형시 width가 유동적으로 변경됨, ie10이하x */
+			background-color: #eaa;
+		}
+		.main-content, .main-nav, .main-sidebar {
+			width: 100px;
+			margin: 10px; 
+			line-height: 75px; 
+			text-align: center; 
+			background-color: #fff;
+		}
+
+		/*flex-direction : */
+		 .flex-direction{display: flex; margin: 20px 0; background-color: #aea;}
+		 .flex-direction li{width: 100px; margin: 10px; line-height: 30px; background-color: #fff; text-align: center;}
+		 .flex-direction.column {flex-direction: column;}
+		 .flex-direction.column-reverse {flex-direction: column-reverse;}
+		 .flex-direction.row {flex-direction: row;}
+		 .flex-direction.row-reverse {flex-direction: row-reverse;}
+
+		/*flex-wrap : nowrap(ie10이하x)을 제외하고 ie9이하x*/
+		 .flex-wrap{display: flex; margin: 20px 0; background-color: #aae;}
+		 .flex-wrap li{width: 100px; margin: 10px; line-height: 30px; background-color: #fff; text-align: center;}
+		 .flex-wrap.wrap {flex-wrap: wrap;}
+		 .flex-wrap.nowrap {flex-wrap: nowrap;}
+		 .flex-wrap.wrap-reverse {flex-wrap: wrap-reverse;}
+
+		/* flex-flow :  */
+		 .flex-flow{display: flex; flex-flow: row wrap; margin: 20px 0; background-color: #aee;}
+		 .flex-flow li{width: 100px; margin: 10px; line-height: 30px; background-color: #fff; text-align: center;}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<h1>Flex</h1>
+		<hr />
+		<br />
+		<h2>display: flex; flex-wrap: nowrap;</h2>
+		<br />
+		<div class="page-wrap">
+			<section class="main-content" role="main">
+				content
+			</section>
+			<nav class="main-nav" role="navigation">
+				nav
+			</nav>
+			<aside class="main-sidebar" role="complementary">
+				Sidebar
+			</aside>
+		</div>
+		<br />
+		<hr />
+		<br />
+		
+		<h2>flex-direction: column;</h2>
+		<ul class="flex-direction column">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+
+		<h2>flex-direction: column-reverse;</h2>
+		<ul class="flex-direction column-reverse">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+
+		<h2>flex-direction: row;</h2>
+		<ul class="flex-direction row">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+
+		<h2>flex-direction: row-reverse;</h2>
+		<ul class="flex-direction row-reverse">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<br />
+		<hr />
+		<br />
+
+		<h2>flex-wrap: wrap;</h2>
+		<ul class="flex-wrap wrap">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+
+		<h2>flex-wrap: nowrap;</h2>
+		<ul class="flex-wrap nowrap">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+
+		<h2>flex-wrap: wrap-reverse;</h2>
+		<ul class="flex-wrap wrap-reverse">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<br />
+		<hr />
+		<br />
+
+		<h2>flex-flow: row wrap; = flex-wrap: wrap; 효과는 동일한데 차이점은 뭘까....</h2>
+		<ul class="flex-flow row-wrap">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+		
+
+
+</body>
+</html>
