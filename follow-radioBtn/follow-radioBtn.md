@@ -5,12 +5,12 @@
   * transition
   * ease-out
 
-# Tomorrow I will learn.
-
 ## 2018.05.21
 ### CSS3
   * flex
+  * justify-content: space-around  
+  
+## 2018.05.22
+### CSS3
   * align-items: center
-  * justify-content: space-around
-  * +
-  * ~
+  link : https://www.w3schools.com/css/css3_flexbox.asp
