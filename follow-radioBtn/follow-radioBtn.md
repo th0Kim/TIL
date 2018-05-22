@@ -10,7 +10,7 @@
   * flex
   * justify-content: space-around  
   
-## 2018.05.22
+## 2018.05.23
 ### CSS3
   * align-items: center
   link : https://www.w3schools.com/css/css3_flexbox.asp
