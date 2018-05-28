@@ -6,7 +6,7 @@
 ## WAI-ARIA정의
 : HTML5에서 도입한 role속성을 통해 페이지의 모든 요소에 '역할'을 주며 '스크린리더'가 쉽게 페이지를 분석하고 모든 역할을 분류해 페이지의 색인을 만들 수 있다.
 
-## 표지판(landmark) 역할
+### 표지판(landmark) 역할
 banner : 페이지의 배너 영역 (눈에 잘 띄게 걸어놓는 것 ex.header)
 search : 페이지의 검색 영역 (ex. search Bar)
 navigation : 페이지의 내비게이션 요소 (ex. nav)
@@ -17,7 +17,7 @@ application : 웹 어플리케이션을 담고 있는 영역
 
 * HTML5 태그 <main>가 IE에 지원할 때까지 <main role="main">으로 사용한다.
 
-## 문서 구조 역할
+### 문서 구조 역할
 document : 문서 내용을 담는 영역, application 내용과는 구별됨 (ex. body)
 article : 독립적인 부분을 형성함
 definition : 어떤 개념이나 주제를 정의함
