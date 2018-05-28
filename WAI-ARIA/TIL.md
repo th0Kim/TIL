@@ -7,13 +7,13 @@
 : HTML5에서 도입한 role속성을 통해 페이지의 모든 요소에 '역할'을 주며 '스크린리더'가 쉽게 페이지를 분석하고 모든 역할을 분류해 페이지의 색인을 만들 수 있다.
 
 ### 표지판(landmark) 역할
-banner : 페이지의 배너 영역 (눈에 잘 띄게 걸어놓는 것 ex.header)
-search : 페이지의 검색 영역 (ex. search Bar)
-navigation : 페이지의 내비게이션 요소 (ex. nav)
-main : 페이지의 주된 내용이 시작함 (ex. main)
-contentinfo : 저작권 정보, 발행일 등 내용에 대한 정보가 있는 곳 (ex. footer)
-complementary : 페이지의 주된 내용을 보충하지만, 자체로도 의미 있는 내용 (ex. aside)
-application : 웹 어플리케이션을 담고 있는 영역
+  - banner : 페이지의 배너 영역 (눈에 잘 띄게 걸어놓는 것 ex.header)
+  - search : 페이지의 검색 영역 (ex. search Bar)
+  - navigation : 페이지의 내비게이션 요소 (ex. nav)
+  - main : 페이지의 주된 내용이 시작함 (ex. main)
+  - contentinfo : 저작권 정보, 발행일 등 내용에 대한 정보가 있는 곳 (ex. footer)
+  - complementary : 페이지의 주된 내용을 보충하지만, 자체로도 의미 있는 내용 (ex. aside)
+  - application : 웹 어플리케이션을 담고 있는 영역
 
 * HTML5 태그 <main>가 IE에 지원할 때까지 <main role="main">으로 사용한다.
 
