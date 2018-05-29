@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transforms</title>
+	<style>
+		div{
+			font-size: 12px;
+		}
+		.translate{
+			width: 300px;
+			height: 100px;
+			background-color: yellow;
+			border: 1px solid #333;
+			transform: translate(20px, 50px);
+		}
+
+		.rotate{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			border: 1px solid #444;
+			transform: rotate(45deg) translate(30px, 0px);
+		}
+
+		.scale{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			transform: scale(2,1);
+		}
+		.scale:hover{
+			transform: scale(1,1);
+		}
+
+		.skewX{
+			width: 200px;
+			height: 100px;
+			background-color: yellow;
+			transform: skewX(20deg);
+		}
+
+		.skewY{
+			width: 100px;
+			height: 200px;
+			background-color: blue;
+			transform: skewY(20deg);
+		}
+
+		.skew{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			transform: skew(20deg, 10deg);
+		}
+
+		.matrix div{
+			width: 200px;
+			height: 100px;
+			border: 1px solid blue;
+			background-color: #eaa;
+		}
+		.matrix .box2{
+			transform: matrix(1, -0.3, 0, 1, 0, 0);
+		}
+		.matrix .box3{
+			transform: matrix(1, 0, 0.5, 1, 150, 0);
+		}
+	</style>
+</head>
+<body>
+	<div class="translate">
+		transform: translate(20px, 50px);<br/>
+		위치값 조정 해줌, 단 IE9 부터 적용가능<br/>
+		* 단순히 위치값만 조정 되므로 주변에 영향을 준다
+	</div>
+	<br/>
+	<br/>
+	<div class="rotate">
+		transform: rotate(45deg) translate(30px, 0px);
+	</div>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<div class="scale">
+		transform: scale(2,1);<br/>
+		값을 준 width,height 값에 2배, 1배씩 키움<br/>
+		* 마우스 오버시 원래 width, height 크기<br/>
+		* scale을 쓰면 폰트도 따라 바뀐다
+	</div>
+	<br/>
+	<br/>
+	<br/>
+	<div class="skewX">
+		transform: skewX(20deg);<br/>
+		가로 기울기를 준다
+	</div>
+	<br/>
+	<br/>
+	<div class="skewY">
+		transform: skewY(20deg);<br/>
+		세로 기울기를 준다
+	</div>
+	<br/>
+	<br/>
+	<div class="skew">
+		transform skew(20deg, 10deg);<br/>
+		or<br/>
+		transform skew(20deg);<br/>
+		가로 세로 기울기 한번에
+	</div>
+	<br/>
+	<br/>
+	<br/>
+	<div class="matrix">
+		<div class="box1">
+			
+		</div>
+		<div class="box2">
+			
+		</div>
+		<div class="box3">
+			
+		</div>
+	</div>
+</body>
+</html>
