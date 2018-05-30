@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transforms</title>
+	<style>
+		div{
+			font-size: 12px;
+		}
+		.animation{
+			width: 20px;
+			height: 20px;
+			margin-bottom: 250px;
+			background-color: #eaa;
+			position: relative;
+			animation-name: sample;
+			animation-duration: 4s; /* take times */
+			animation-delay: 2s; /* after open browser */
+
+			animation-iteration-count: 2; /* replay times */
+
+			animation-direction: alternate;
+
+			/* 한줄 쓰기 animation: sample 5s linear 2s 2 alternate; */
+		}
+		@keyframes sample{
+			0%{background-color: #eaa; left: 0px; top: 0;}
+			25%{background-color: #eae; left: 200px; top: 0;}
+			50%{background-color: #eea; left: 200px; top: 200px;}
+			75%{background-color: #aea; left: 0px; top: 200px;}
+			100%{background-color: #eaa; left: 0px; top: 0;}
+		}
+
+	</style>
+</head>
+<body>
+	ie10이상 가능
+	<div class="animation">
+		
+	</div>
+	<textarea name="" id="" cols="30" rows="10">
+			animation-name: sample;
+
+			animation-duration: 4s; /* take times */
+
+			animation-delay: 2s; /* after open browser */
+
+			animation-iteration-count: 2; /* replay times */
+			animation-iteration-count: infinite;
+			
+			animation-direction: normal; /* default */
+			animation-direction: reverse; /* 역방향으로 재생 100% > 0% */
+			animation-direction: alternate; /* 기본값 재생 후 역방향 재생 */
+			animation-direction: alternate-reverse; /* 역방향 재생 후 기본값 재생 */
+	
+
+	</textarea>
+
+</body>
+</html>
