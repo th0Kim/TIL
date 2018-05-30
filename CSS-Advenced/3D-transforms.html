@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transforms</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			font-size: 12px;
+		}
+		div:hover{
+			transition: all 1s;
+		}
+		.rotateX{
+			background-color: red;
+		}
+		.rotateX:hover{
+			transform: rotateX(180deg);
+		}
+		.rotateY{
+			background-color: blue;
+		}
+		.rotateY:hover{
+			transform: rotateY(180deg);
+		}
+		.rotateZ{
+			background-color: purple;
+		}
+		.rotateZ:hover{
+			transform: rotateZ(180deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="rotateX">
+		transform: rotateX(180deg);
+		ie10부터 가능
+	</div>
+	<br/>
+	<br/>
+	<div class="rotateY">
+		transform: rotateY(180deg);
+		ie10부터 가능
+	</div>
+	<br/>
+	<br/>
+	<div class="rotateZ">
+		transform: rotateZ(180deg);
+		ie10부터 가능
+	</div>
+</body>
+</html>
