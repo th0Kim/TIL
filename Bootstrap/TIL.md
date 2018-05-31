@@ -1,7 +1,7 @@
 # Today I learn.
 ## Bootstrap
 
-### 2018.05.22
+### 2018.05.22 Start!
 #### How to
 -link type
   <!-- Latest compiled and minified CSS -->
@@ -20,3 +20,7 @@ Tutorial: https://www.w3schools.com/bootstrap/default.asp
 #### Learn
   - step1. Container types
   - step2. Grids
+  - step3. Typography
+  - step4. responsive_table
+  - step4. table
+  - step5. images
