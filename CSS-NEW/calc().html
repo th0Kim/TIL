@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		.calc{
+			width: 95%; /* ie8이하 구버전 대비용 */
+			width : -webkit-calc(100% - 50px); /* for Chrome, Safari */
+		    width :    -moz-calc(100% - 50px); /* for Firefox */
+		    width :         calc(100% - 50px); /* for IE */
+			box-sizing: border-box;
+			padding: 4px;
+			border: 1px solid #ddd;
+		}
+	</style>
+</head>
+<body>
+	<div class="calc">
+		CSS의 사이즈 계산
+	</div>
+</body>
+</html>
