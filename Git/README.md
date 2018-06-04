@@ -7,7 +7,7 @@
 
 #### Second - clone project
 1. cd I:\work\
-2. git clone adress
+2. git remote add origin adress
 
 #### git commit
 edit - save - GIT - commit - password
