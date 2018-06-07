@@ -16,8 +16,6 @@
   14. git pull origin master (원격저장소의 내용을 가져와 로컬저장소의 내용과 자동으로 병합작업)
   15. git push origin master (git에 업로드)
 
-
-
 ### 사용 명령어
 * git status
 * git remote add 이름 주소
@@ -30,3 +28,16 @@
 * git commit -m
 * git pull
 * git push
+
+
+### 2018.06.07
+### VSCODE 'LIVE SERVER' port 오류 났을때
+  해당 폴더 .git폴더와 동일 위체에서 열면 정상적으로 Live Server 'Go live'를 사용할 수 있다.
+### merge 
+  1. 사용하고 있는 th0Kim(브랜치)에서 좌측 상단의 체크표시 클릭해서 'commit'
+  2. 왼쪽 하단 '동기화'
+  3. 'git merge origin'
+  4. master(브랜치)로 변경
+  5. git merge th0Kim
+  6. git merge origin
+ //* 기억을 더듬어 작성 했으니 2018.06.08 재시도 후 재작성 할
