@@ -38,4 +38,4 @@
   2. 좌측 하단 '동기화'  - origin/th0Kim이 th0Kim과 같은 맨 윗줄로 옴
   3. master(브랜치)로 변경 후 git merge th0Kim - master가 th0Kim과 같은 맨 윗줄로 옴
   4. 좌측 하단 '동기화' - th0Kim/master가 th0Kim과 같은 맨 윗줄로 옴
-  * 결과 - th0Kim , master , origin/th0Kim , th0Kim/master
+  * 결과 - th0Kim , master , origin/th0Kim , th0Kim/master 동일선상으로 올라감(맨 위로 갈수록 최신)
