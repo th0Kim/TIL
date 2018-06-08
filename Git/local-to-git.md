@@ -34,8 +34,8 @@
 ### VSCODE 'LIVE SERVER' port 오류 났을때
   해당 폴더 .git폴더와 동일 위체에서 열면 정상적으로 Live Server 'Go live'를 사용할 수 있다.
 ### merge 
-  1. 사용하고 있는 th0Kim(브랜치)에서 좌측 상단의 체크표시 클릭해서 'commit' - th0Kim이 맨윗줄로 옴
-  2. 왼쪽 하단 '동기화'  - origin/th0Kim이 th0Kim과 같은 맨 윗줄로 옴
+  1. 사용하고 있는 th0Kim(브랜치)에서 좌측 상단의 체크표시 클릭해서 'commit' - th0Kim이 맨 윗줄로 옴
+  2. 좌측 하단 '동기화'  - origin/th0Kim이 th0Kim과 같은 맨 윗줄로 옴
   3. master(브랜치)로 변경 후 git merge th0Kim - master가 th0Kim과 같은 맨 윗줄로 옴
-  4. 왼쪽 하단 '동기화' - th0Kim/master가 th0Kim과 같은 맨 윗줄로 옴
+  4. 좌측 하단 '동기화' - th0Kim/master가 th0Kim과 같은 맨 윗줄로 옴
   * 결과 - th0Kim , master , origin/th0Kim , th0Kim/master
