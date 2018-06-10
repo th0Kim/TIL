@@ -47,16 +47,20 @@
   ### 속성
     - 필수 항목 속성 aria-required
       사용방법 : <input  type="checkbox"  aria‐required="true" />
+      
     - 추가 설명 속성 aria‐describedby
       사용방법 : <input  type="text"  aria-describedby="reference"> <div  id="reference">추가설명</div> 
+      
     - 그룹 제목 속성 aria-label
       사용방법 : <div  role="group"  aria‐label="그룹제목">...</div>
 
   ### 상태
      - 확장되어 있는 상태의 탭패널 aria‐expanded="true"
        사용방법 : <div  role="tabpanel"  aria‐expanded="true">...</div>
+       
      - 오류가 발생한 상태의 입력상자 aria-invalid="true"
        사용방법 : <input  type="text"  aria-invalid="true" /> 
+       
      - 선택된 상태의 토글버튼 aria‐pressed="true"
        사용방법 : <button  aria‐pressed="true">...</button> 
 
