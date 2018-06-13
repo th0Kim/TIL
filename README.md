@@ -8,3 +8,4 @@ HTML! CSS3! jQuery! Hello World!
 * Make GitHub 'TIL'
 * Use GitHub
 * Learn GitHub
+* Learn everything 
