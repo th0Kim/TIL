@@ -3,6 +3,52 @@
 
 ### .to()
 ### .from()
+- link : https://blog.grotesq.com/js-tweenmax-1
+- 실습파일 : example.html
 
-link : https://blog.grotesq.com/js-tweenmax-1
 
+## Additional Methods
+    delay()
+    delayedCall()
+    duration()
+    eventCallback
+    from()
+    fromTo()
+    getTweensOf()
+    invalidate()
+    isActive()
+    kill()
+    killDelayedCallsTo()
+    killTweensOf()
+    pause()
+    paused()
+    play()
+    progress()
+    restart()
+    resume()
+    reverse()
+    reversed()
+    seek()
+    set()
+    startTime()
+    time()
+    timeScale()
+    to()
+    totalDuration()
+    totalProgress()
+    totalTime()
+    getAllTweens()
+    isTweening()
+    killAll()
+    killChildTweensOf()
+    pauseAll()
+    repeat()
+    repeatDelay()
+    resumeAll()
+    staggerFrom()
+    staggerFromTo()
+    staggerTo()
+    updateTo()
+    yoyo()
+  
+- link : https://greensock.com/tweenmax
