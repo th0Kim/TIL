@@ -3,8 +3,13 @@
 
 ### .to()
 ### .from()
+### .repeat()
+### .repeatDelay()
+### .yoyo()
 - link : https://blog.grotesq.com/js-tweenmax-1
-- 실습파일 : example.html
+- link : https://greensock.com/multipletextshadows
+- 실습파일 : example01.html, example02.html 
+
 
 
 ## Additional Methods
