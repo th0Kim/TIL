@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TweenMax</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<style>
+		section{
+			width: 100px;
+			height: 100px;
+			background-color: #000;
+			/*opacity: 0;*/
+		}
+	</style>
+</head>
+<body>
+	<section></section>
+</body>
+</html>
+
+<script>
+	//TweenMax.to($('section'),5,{opacity:1} );
+	// .to() 메서드
+	// .to(대상, 시간, 속성 )
+	// opacity css 지원 않은 브라우저에서 사용 가능한 .from()사용
+
+	TweenMax.from($('section'),5,{opacity:0} );
+</script>
