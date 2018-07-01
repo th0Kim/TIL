@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body{background-color: #333;}
+		.loader {
+		    display: inline-flex;
+		    flex-wrap: wrap;
+		    width: 90px;
+		    height: 90px;
+		    transform-style: preserve-3d;
+		    transform: rotateX(45deg) rotate(45deg);
+		}
+		.box {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 30px;
+		    height: 30px;
+		    background: #FED750;
+		    box-shadow: 112.5px 112.5px 20px #000;
+		    animation: move 2s ease-in-out infinite both;
+		    transform-style: preserve-3d;
+		}
+
+		.box:before {
+		    top: 100%;
+		    left: 0;
+		    background: #E6A32F;
+		    transform-origin: center top;
+		    transform: rotateX(-90deg);
+		}
+
+		.box:after {
+		    top: 0;
+		    left: 100%;
+		    background: #C87932;
+		    transform-origin: center left;
+		    transform: rotateY(90deg);
+		}
+
+		.box:before, .box:after {
+		    display: block;
+		    content: "";
+		    position: absolute;
+		    width: 30px;
+		    height: 30px;
+		}
+
+		@keyframes move {
+		  0%{ left: 50px;}
+		  30%{ top: 50px;}
+		  60%{ left: 0px;}
+		  90%{ top: 0px;}
+		  100%{ left: 50px;}
+
+		}
+	</style>
+</head>
+<body>
+	<div class="loader">
+		<div class="box"></div>
+	</div>
+</body>
+</html>
