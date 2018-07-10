@@ -9,3 +9,5 @@ HTML! CSS3! jQuery! Hello World!
 * Use GitHub
 * Learn GitHub
 * Learn everything 
+
+<a href="https://th0kim.github.io/TIL/javascript/TIL.md" target="_blank">javascript</a>
