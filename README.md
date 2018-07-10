@@ -10,4 +10,4 @@ HTML! CSS3! jQuery! Hello World!
 * Learn GitHub
 * Learn everything 
 
-<a href="https://th0kim.github.io/TIL/javascript/TIL.md" target="_blank">javascript</a>
+<a href="https://th0kim.github.io/TIL/follow-radioBtn/follow-radioBtn.html" target="_blank">javascript</a>
