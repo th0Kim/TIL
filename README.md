@@ -10,4 +10,5 @@ HTML! CSS3! jQuery! Hello World!
 * Learn GitHub
 * Learn everything 
 
-<a href="https://th0kim.github.io/TIL/follow-radioBtn/follow-radioBtn.html" target="_blank">javascript</a>
+#### git 링크 예제
+<a href="https://th0kim.github.io/TIL/follow-radioBtn/follow-radioBtn.html" target="_blank">git 링크 이동</a>
