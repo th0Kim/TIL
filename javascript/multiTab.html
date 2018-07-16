@@ -71,11 +71,7 @@
 
         app.init = function(){
 
-            var addNum = 0;
-            var tabItem = {
-                    tabWrap : $("body").find($(".tabWrap")),
-                    tabBtn : $(".btnWrap").find("button")
-                }
+            var tabBtn = $(".btnWrap").find("button");
 
             app.handleClicked = function(){
                 var btnIdx = $(this).index(); // 0 1 2
@@ -84,7 +80,7 @@
                 btnParent.children(".tabArea").hide().eq(btnIdx).show(); // .children(".tabArea") 대신 .find(".tabArea") 가능
             };
             
-            $('body').find(tabItem['tabBtn']).on("click", app.handleClicked);
+            $('body').find(tabBtn).on("click", app.handleClicked);
           
         }
 
