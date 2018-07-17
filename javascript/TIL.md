@@ -16,3 +16,7 @@
 ### 2018.07.11
 * 예시문 따라하기 좋은 
  - https://opentutorials.org/module/570/4961
+
+### 2018.07.17
+* 동향 및 기타 이슈
+ - https://d2.naver.com/helloworld
