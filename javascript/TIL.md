@@ -20,3 +20,7 @@
 ### 2018.07.17
 * 동향 및 기타 이슈
  - https://d2.naver.com/helloworld
+
+### 2018.07.24
+* 생활코딩
+ - https://opentutorials.org/course/3085
