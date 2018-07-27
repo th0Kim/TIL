@@ -37,20 +37,28 @@
 .selectBox label{position: relative; z-index: -1; width: 100%; padding: 8px 10px 6px; box-sizing: border-box; border: 1px solid #bebebe;}
 .selectBox label .arrow{position: absolute; z-index: 0; right: 10px; top: 13px;}
 .selectBox .selBox{position: absolute; left: 0; top: 0; z-index: 1; width: 100%; height: 31px; opacity: 0;}
-.selectBox .selBox:focus + label, .btnType01:focus{border: 1px solid #3ba7f2;}
+.selectBox .selBox:focus + label{border: 1px solid #3ba7f2;}
 /* radio */
 .radioWrap label, .chkBoxWrap label{cursor: pointer;}
 .radioLabel.disagree{margin-left: 30px;}
 .chkBoxWrap label{margin-left: 30px;}
 .chkBoxWrap label:first-of-type{margin-left: 0;}
 .radioIcon, .checkIcon{display: inline-block; position: relative; z-index: 0; width: 16px; height: 16px; margin-right: 9px; overflow: hidden; vertical-align: middle;}
+.radioWrap input:focus ~ b{color:#3ba7f2;}
+.checkIcon{width: 14px; height: 14px; border: 1px solid #bebebe;}
+.chkBoxWrap input:focus + .checkIcon{border: 1px solid #3ba7f2;}
 .radioIcon img, .checkIcon img{position: absolute; z-index: 0; left: -16px; top: 0;}
+.checkIcon img{left: -14px;}
 .radioLabel input:checked + .radioIcon img, .checkLabel input:checked + .checkIcon img{left: 0px;}
 /* button */
 .btnType01{padding: 6px 10px 8px; border: 1px solid #a8adb0; background-color: #f2f2f2; color:#444544;}
+.btnType01:hover{background-color: #b9b9b9; transition: all 0.5s;}
 .btnType02{padding: 6px 10px 8px; border: 1px solid #a8adb0; background-color: #fff; color:#323332;}
+.btnType02:hover{background-color: #f2f2f2; transition: all 0.5s;}
+.btnType01:focus, .btnType02:focus, .btnWrap .btns:focus{border: 1px solid #3ba7f2;}
 .btnWrap{margin-top: 50px; text-align: center;}
 .btnWrap .btns{display: inline-block; width: 154px; padding:19px 0 18px; background-color: #40464d; color: #fff;}
+.btnWrap .btns:hover{font-weight: 800;}
 .btnWrap .btns.rightBtn{margin-left: 5px;}
 .btnWrap .btns.redBtn{background-color: #d91f26;}
 /* text */
@@ -62,11 +70,9 @@
 /* tab */
 .tabBtn{margin: 14px 0 29px; border-bottom: 1px solid #4d4d4d; clear: both; overflow: hidden;}
 .tabBtn li{float: left; width: 20%;}
-.tabBtn li button{width: 100%; padding: 12px 0; border-top: 1px solid #bebebe; color: #808080; background-color: #e6e6e6; box-sizing: border-box; text-align: center;}
-.tabBtn li:first-child button{border-left: 1px solid #bebebe;}
+.tabBtn li button{width: 100%; padding: 12px 0; border-top: 1px solid #bebebe; border-left: 1px solid #bebebe; color: #808080; background-color: #e6e6e6; box-sizing: border-box; text-align: center;}
 .tabBtn li:last-child button{border-right: 1px solid #bebebe;}
-.tabBtn button.current{color: #ffffff; background-color: #4d4d4d;}
-.tabBtn li:first-child button.current, .tabBtn li:last-child button.current{border-color: #4d4d4d;}
+.tabBtn button.current, .tabBtn li button:focus, .tabBtn li button:hover{color: #ffffff; background-color: #4d4d4d; border-color: #4d4d4d; transition: all 0.4s;}
 /* color */
 .color02{color: #bebebe;}
 .bgGray{background-color: #fafafa;}
@@ -98,6 +104,7 @@
 .wonSpace{display: inline-block; min-width: 135px; padding-left: 11px; box-sizing: border-box;}
 .likeTable{margin-top: 50px; border-top: 2px solid #4d4d4d; border-bottom: 1px solid #dbdbdb; padding: 26px 80px; background-color: #f5f5f5;}
 .likeTable .checkLabel{padding-top: 8px;}
+.likeTable input:focus + .checkIcon{border: 1px solid #3ba7f2;}
 .likeTable .btnType02{float: right;}
 
 /* footer */
