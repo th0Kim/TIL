@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>마크업, 웹표준, 웹접근성</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/default.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div id="skipnavi">
+            <a href="#conWrap">본문바로가기</a>
+        </div>
+        <!-- HEADER -->
+        <header class="header"><h1><img src="img/header.jpg" alt="헤더영역" /></h1></header>
+        <!-- // HEADER -->
+        <!-- CONTENTS -->
+        <div class="container">
+            <aside class="lnbWrap"><h2><img src="img/lnb.jpg" alt="좌측메뉴" /></h2></aside>
+            <section class="contents" id="conWrap">
+                <div class="subNaviWrap">
+                    <h3 class="pageTitle">IRP가입</h3>
+                    <ul class="subNavi">
+                        <li>퇴직연금</li>
+                        <li>퇴직연금가입</li>
+                        <li>IRP가입</li> <!-- remove last Class -->
+                    </ul>
+                </div>
+                
+                <h4 class="blind">IRP가입 진행순서</h4>
+                <div class="joinStepWrap">
+                    <ul class="joinStep">
+                        <li><span class="blind">STEP 01</span><img src="img/ico_clear.jpg" alt="작성 완료"/></li>
+                        <li class="current"><span class="step">STEP 02</span><span class="stepTit">계약정보입력</span></li>
+                        <li><span class="blind">STEP</span><span class="stepNum">03</span></li>
+                        <li><span class="blind">STEP</span><span class="stepNum">04</span></li>
+                        <li><span class="blind">STEP</span><span class="stepNum">05</span></li>
+                    </ul>
+                </div>
+                
+                <h4 class="subTitle">계약자정보입력</h4>
+                <article class="artiCon">
+                    <div class="tableType">
+                        <table>
+                            <caption>이름, 주민등록번호, 휴대전화, 자택번호, 이메일, 자택주소, 직장주소</caption>
+                            <colgroup>
+                                <col style="width: 18%" />
+                                <col style="width: 32%" />
+                                <col style="width: 18%" />
+                                <col style="width: 32%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">이름</th>
+                                    <td><input type="text" class="inputTxt info04" title="이름 입력란"/></td>
+                                    <th scope="row">주민등록번호</th>
+                                    <td><p class="onlyTbTxt">800101-1</p></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">휴대전화</th>
+                                    <td>
+                                        <div class="selectBox info01">
+                                            <select name="phone" id="selBox010" class="selBox">
+                                                <option value="">010</option>
+                                                <option value="">011</option>
+                                                <option value="">016</option>
+                                            </select>
+                                            <label for="selBox010" title="앞자리선택">010<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                        </div>
+                                        <span class="color02 marginL">-</span>
+                                        <input type="text" class="inputTxt info04 marginL" placeholder="- 없이 입력" title="-없이 휴대전화 입력란"/>
+                                    </td>
+                                    <th scope="row">자택번호</th>
+                                    <td>
+                                        <div class="selectBox info01">
+                                            <select name="home" id="selBoxlocal" class="selBox">
+                                                <option value="">02</option>
+                                                <option value="">042</option>
+                                                <option value="">043</option>
+                                            </select>
+                                            <label for="selBoxlocal" title="앞자리선택">02<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                        </div>
+                                        <span class="color02 marginL">-</span>
+                                        <input type="text" class="inputTxt info04 marginL" placeholder="- 없이 입력" title="-없이 자택번호 입력란"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이메일</th>
+                                    <td colspan="3">
+                                        <input type="text" class="inputTxt info05" title="이메일 아이디란"/><span class="marginL">@</span>
+                                        <input type="text" class="inputTxt info05 marginL" title="이메일 주소란"/>
+                                        <div class="selectBox info05 marginL">
+                                            <select name="email" id="selBoxEmail" class="selBox">
+                                                <option value="">직접입력</option>
+                                                <option value="">daum.net</option>
+                                                <option value="">naver.com</option>
+                                                <option value="">gmail.com</option>
+                                            </select>
+                                            <label for="selBoxEmail" title="이메일주소 선택">직접입력<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">자택주소</th>
+                                    <td colspan="3">
+                                        <div class="adrFind"><input type="text" class="inputTxt info02" title="우편번호" readonly title="우편번호"/> <button type="button" class="btn smallSizeBtn marginL">주소찾기</button></div>
+                                        <div class="adrText"><input type="text" class="inputTxt info08" placeholder="도로명 주소" readonly title="도로명 주소"/> <input type="text" class="inputTxt info08 marginL" placeholder="상세 주소" title="상세 주소"/></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">직장주소</th>
+                                    <td colspan="3">
+                                        <div class="adrFind"><input type="text" class="inputTxt info02" title="우편번호" readonly title="우편번호"/> <button type="button" class="btn smallSizeBtn marginL">주소찾기</button></div>
+                                        <div class="adrText"><input type="text" class="inputTxt info08" placeholder="도로명 주소" readonly title="도로명 주소"/><input type="text" class="inputTxt info08 marginL" placeholder="상세 주소" title="상세 주소"/></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+                
+                <h4 class="subTitle">정보수신여부</h4>
+                <article class="artiCon">
+                    <div class="tableType">
+                        <table>
+                            <caption>정보수신동의, 매체선택</caption>
+                            <colgroup>
+                                <col style="width: 20%" />
+                                <col style="width: 80%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">정보수신동의</th>
+                                    <td>
+                                        <div class="radioWrap">
+                                            <label for="agree" class="radioLabel agree"><input type="radio" id="agree" name="choose" class="blind" checked="checked"/><span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span><b>동의</b></label>
+                                            <label for="disagree" class="radioLabel disagree"><input type="radio" id="disagree" name="choose" class="blind"/><span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span><b>동의안함</b></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">매체선택</th>
+                                    <td class="chkBoxWrap">
+                                        <label for="allAccept" class="checkLabel"><input type="checkbox" id="allAccept" name="accept" class="blind" checked/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>전체</label>
+                                        <label for="smsAccept" class="checkLabel"><input type="checkbox" id="smsAccept" name="accept" class="blind"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>문자메시지</label>
+                                        <label for="mailAccept" class="checkLabel"><input type="checkbox" id="mailAccept" name="accept" class="blind"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>이메일</label>
+                                        <label for="postHomeAccept" class="checkLabel"><input type="checkbox" id="postHomeAccept" name="accept" class="blind"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>우편(자택)</label>
+                                        <label for="postJobAccept" class="checkLabel"><input type="checkbox" id="postJobAccept" name="accept" class="blind"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>우편(직장)</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="txt normalDot">정보수신동의를 하셔야만 계약안내장 등의 계약운용정보를 수신할 수 있습니다.</p>
+                </article>
+                    
+                <h4 class="subTitle">직장정보</h4>
+                <article class="artiCon">
+                    <div class="tableType">
+                        <table>
+                            <caption>현(전)직장명, 퇴직연금사업자</caption>
+                            <colgroup>
+                                <col style="width: 20%" />
+                                <col style="width: 80%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">현(전)직장명</th>
+                                    <td><input type="text" class="inputTxt info05" title="현(전)직장명 입력란"/></td>
+                                </tr>
+                                <tr>  
+                                    <th scope="row">퇴직연금사업자</th>
+                                    <td><input type="text" class="inputTxt info05 bgGray" readonly title="퇴직연금사업자 번호"/> <button type="button" class="btn smallSizeBtn marginL">사업자검색</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="listDot">
+                        <li>당사/타사 확정급여형(DB)도는 확정기여형(DC) 계약에 가입되어 있거나 가입 후 퇴직한 경우에 입력해 주세요.</li>
+                        <li>타 퇴직연금 사업자에 가입되어 있는 경우 자사 개인형 퇴직연금제도에 가입하기 위해 가입확인서 등 기타 서류가 필요할 수 있습니다.</li>
+                    </ul>
+                </article>
+
+                <h4 class="subTitle"><span class="color01">[선택]</span> 소득금액증명서 제출</h4>
+                <article class="artiCon">
+                    <div class="tableType">
+                        <table>
+                            <caption>발급번호 입력</caption>
+                            <colgroup>
+                                <col style="width: 20%" />
+                                <col style="width: 80%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">발급번호</th>
+                                    <td class="issuNum">
+                                        <input type="text" class="inputTxt info03" placeholder="4자리" title="첫번째 4자리"/>
+                                        <input type="text" class="inputTxt info03 marginL" placeholder="4자리" title="두번째 4자리"/>
+                                        <input type="text" class="inputTxt info03 marginL" placeholder="4자리" title="세번째 4자리"/>
+                                        <input type="text" class="inputTxt info03 marginL" placeholder="4자리" title="네번째 4자리"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="listDot">
+                        <li>국세청 홈페이지에서 소득금액증명원 발급이 가능하며, 인터넷열람용으로 제공됩니다.</li>
+                        <li>준비된 서류가 있으면 입력해 주세요. 소득금액증서류 제출을 대체할 수 있습니다.</li>
+                    </ul>
+                </article>
+                
+                <h4 class="subTitle">세금우대한도설정</h4>
+                <article class="artiCon">
+                    <div class="tableType">
+                        <table>
+                            <caption>세금우대한도잔여 입력</caption>
+                            <colgroup>
+                                <col style="width: 18%" />
+                                <col style="width: 32%" />
+                                <col style="width: 18%" />
+                                <col style="width: 32%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">세금우대한도잔여</th>
+                                    <td class="clfix">
+                                        <span class="wonSpace">0 원</span><button type="button" class="btn smallSizeBtn marginL">한도조회</button>
+                                    </td>
+                                    <th scope="row">세금우대한도설정</th>
+                                    <td>
+                                        <input type="text" class="inputTxt info06" title="금액 입력란"/><span class="onlyTbTxt">원</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="listDot">
+                        <li>개인부담금 납입한도는 연간 최대 1,200만원입니다. (단, 연금저축 +DC/IRP개인부담금 합산 1,800만원까지 입니다.)</li>
+                        <li>한도조회 버튼을 클릭하여 세금우대한도잔여 금액을 조회해 주시기 바랍니다. </li>
+                        <li>세금우대한도설정액이란?
+                            <ul class="listSpace">
+                                <li>- 매년 개인형IRP로 추가 납입할 예상금액만큼을 세금우대로 설정할 수 있는 한도금액입니다. </li>
+                                <li>- 세금우대한도잔여금액 내에서 세금우대한도를 설정할 수 있으며 한번 설정되면 매년 같은 금액으로 세금우대한도가 설정됩니다.</li>
+                                <li>- 기본적으로 3백만 원으로 설정되어 있으니 변경을 원하시는 고객님은 원하시는 금액을 입력해주시기 바랍니다. </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+                
+                <h4 class="subTitle">납입정보</h4>
+                <article class="artiCon">
+                    <div class="tabWrap">
+                        <ul class="tabBtn">
+                            <li><button type="button" class="current">즉시출금</button></li>
+                            <li><button type="button">가상계좌</button></li>
+                        </ul>
+                        <div class="tabArea">
+                            <div class="tableType">
+                                <table>
+                                    <caption>납입금액, 계좌번호, 예금주명 입력</caption>
+                                    <colgroup>
+                                        <col style="width: 18%" />
+                                        <col style="width: 82%" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">납입금액</th>
+                                            <td><input type="text" class="inputTxt info07" title="금액 입력란"/><span class="marginL">원</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">계좌번호</th>
+                                            <td>
+                                                <div class="selectBox info07">
+                                                    <select name="bank01" id="selBoxBank01" class="selBox">
+                                                        <option value="">은행선택</option>
+                                                        <option value="">신한은행</option>
+                                                        <option value="">국민은행</option>
+                                                        <option value="">카카오뱅크</option>
+                                                    </select>
+                                                    <label for="selBoxBank01">은행선택<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                                </div>
+
+                                                <input type="text" class="inputTxt info07 marginL" placeholder="- 없이 입력" title="계좌번호 입력란"/>
+                                                <button type="button" class="btn smallSizeBtn marginL">계좌확인</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">예금주명</th>
+                                            <td>
+                                                <input type="text" class="inputTxt info07" placeholder="- 없이 입력" title="계좌번호 입력란"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="txt normalDot">개인추가납입은 IRP 계약심사 완료 후 납입금액이 출금되며, 계약이 완료됩니다.</p>
+                        </div>
+                        <div class="tabArea" style="display: none;">
+                            <div class="tableType">
+                                <table>
+                                    <caption>납입금액, 계좌번호 입력</caption>
+                                    <colgroup>
+                                        <col style="width: 20%" />
+                                        <col style="width: 80%" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">납입금액</th>
+                                            <td><input type="text" class="inputTxt info06" title="금액 입력란"/><span class="marginL">원</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">입금전용계좌</th>
+                                            <td>
+                                                <div class="selectBox info05">
+                                                    <select name="bank02" id="selBoxBank" class="selBox">
+                                                        <option value="">은행선택</option>
+                                                        <option value="">신한은행</option>
+                                                        <option value="">국민은행</option>
+                                                        <option value="">카카오뱅크</option>
+                                                    </select>
+                                                    <label for="selBoxBank">은행선택<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul class="listDot">
+                                <li>입금전용계좌로 선택하신 은행에 고객님의 이름으로 가상계좌가 개설 됩니다.</li>
+                                <li>가입신청 후 가상계좌번호로 납입예정금액을 입금해 주셔야 계약이 완료됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <h4 class="subTitle">자동이체신청</h4>
+                <article class="artiCon">
+                    <div class="tableType">
+                        <table>
+                            <caption>신청여부, 자동이체금액, 계좌번호, 예금주명, 신청내용, 이체일, 자동이체시작일 입력</caption>
+                            <colgroup>
+                                <col style="width: 20%" />
+                                <col style="width: 30%" />
+                                <col style="width: 20%" />
+                                <col style="width: 30%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">자동이체신청</th>
+                                    <td colspan="3">
+                                        <div class="radioWrap">
+                                            <label for="yesApply" class="radioLabel agree"><input type="radio" id="yesApply" name="apply" class="blind" checked="checked"/><span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span><b>동의</b></label>
+                                            <label for="noApply" class="radioLabel disagree"><input type="radio" id="noApply" name="apply" class="blind"/><span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span><b>동의안함</b></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">자동이체금액</th>
+                                    <td colspan="3"><input type="text" class="inputTxt info07" title="자동이체금액 입력란"/><span class="marginL">원</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">계좌번호</th>
+                                    <td colspan="3">
+                                        <div class="selectBox info05">
+                                            <select name="bank03" id="selBoxBankAuto" class="selBox">
+                                                <option value="">은행선택</option>
+                                                <option value="">신한은행</option>
+                                                <option value="">국민은행</option>
+                                                <option value="">카카오뱅크</option>
+                                            </select>
+                                            <label for="selBoxBankAuto">은행선택<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                        </div>
+                                        <input type="text" class="inputTxt info07 marginL" placeholder="- 없이 입력" title="계좌번호 입력란"/>
+                                        <button type="button" class="btn smallSizeBtn marginL">계좌확인</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">예금주명</th>
+                                    <td><input type="text" class="inputTxt info07" placeholder="- 없이 입력" title="예금주명 입력란"/></td>
+                                    <th scope="row">신청내용</th>
+                                    <td><p class="onlyTbTxt">신규</p></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이체일</th>
+                                    <td>
+                                        <div class="selectBox info07">
+                                            <select name="bank04" id="autoBank" class="selBox">
+                                                <option value="">은행선택</option>
+                                                <option value="">신한은행</option>
+                                                <option value="">국민은행</option>
+                                                <option value="">카카오뱅크</option>
+                                            </select>
+                                            <label for="autoBank">은행선택<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                        </div>
+                                    </td>
+                                    <th scope="row">자동이체시작일</th>
+                                    <td><p class="onlyTbTxt">2017년 11월 25일</p></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="listDot">
+                        <li>자동이체를 신청하시면 자동이체시작일일부터 매월 자동이체금액을 이체합니다.<br/>예) 자동이체시작일 : 2015년, 이체일 : 25일 을 선택한 경우 2015년 11월 부터 매월 25일 자동이체금액을 자동으로 청구합니다.)</li>
+                        <li>이체일에 통장 잔액부족 등 기타 사유로 인해 이체되지 못할 경우 재 이체하지 않습니다.(자유납입이므로 매월 한번만 이체)</li>
+                    </ul>
+
+                    <div class="likeTable">
+                        <label for="autoAccept" class="checkLabel"><input type="checkbox" id="autoAccept" class="blind" checked/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>자동이체약관동의</label>
+                        <button type="button" class="btn smallSizeBtn bgWhite">전문보기</button>
+                    </div>
+                </article>
+
+                <div class="btnWrap">
+                    <button type="button" class="btn bigSizeBtn">이전</button>
+                    <button type="button" class="btn bigSizeBtn bgRed">다음</button>
+                </div>
+            </section>
+        </div>
+        <!-- // CONTENTS -->
+        <!-- FOOTER -->
+        <footer class="footer"><img src="img/footer.jpg" alt="푸터영역" /></footer>
+        <!-- // FOOTER -->
+    </div>
+</body>
+</html>
