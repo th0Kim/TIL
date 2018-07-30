@@ -33,20 +33,28 @@
 .tableType td{padding: 11px 0 11px 10px;}
 .onlyTbTxt{padding-left: 11px;}
 /* select Box */
-.selectBox{position: relative; z-index: 0; display: inline-block;}
-.selectBox label{position: relative; z-index: -1; width: 100%; padding: 8px 10px 6px; box-sizing: border-box; border: 1px solid #bebebe;}
-.selectBox label .arrow{position: absolute; z-index: 0; right: 10px; top: 13px;}
-.selectBox .selBox{position: absolute; left: 0; top: 0; z-index: 1; width: 100%; height: 31px; opacity: 0;}
+.selectBox{position: relative; display: inline-block; background-color: #fff;}
+.selectBox .arrow{position: absolute; right: 8px; top: 12px; z-index: 0;}
+.selectBox .selBox{
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    width: 100%; 
+    height: 31px; 
+    padding: 0 25px 0 10px;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none; /* select의 arrow 없앰 */
+}
 .selectBox .selBox:focus + label{border: 1px solid #3ba7f2;}
 /* radio, checkBox */
-.radioWrap label, .chkBoxWrap label{cursor: pointer;}
+.radioWrap label, .checkLabel{position: relative; cursor: pointer;}
+.radioWrap label input, .checkLabel input{position: absolute; left: 0; top: 0; z-index: -1; width: 16px; height: 16px;}
 .radioLabel.disagree{margin-left: 30px;}
-.chkBoxWrap label{margin-left: 30px;}
-.chkBoxWrap label:first-of-type{margin-left: 0;}
+.checkLabel{margin-left: 30px;}
+.checkLabel:first-of-type{margin-left: 0;}
 .radioIcon, .checkIcon{display: inline-block; position: relative; z-index: 0; width: 16px; height: 16px; margin-right: 9px; overflow: hidden; vertical-align: middle;}
-.radioWrap input:focus ~ b{color:#3ba7f2;}
 .checkIcon{width: 14px; height: 14px; border: 1px solid #bebebe;}
-.chkBoxWrap input:focus + .checkIcon{border: 1px solid #3ba7f2;}
 .radioIcon img, .checkIcon img{position: absolute; z-index: 0; left: -16px; top: 0;}
 .checkIcon img{left: -14px;}
 .radioLabel input:checked + .radioIcon img, .checkLabel input:checked + .checkIcon img{left: 0px;}
@@ -105,7 +113,6 @@
 .wonSpace{display: inline-block; width: 100%; max-width: 135px; padding-left: 11px; box-sizing: border-box;}
 .likeTable{display: table; overflow: hidden; width: 100%; margin-top: 50px; border-top: 2px solid #4d4d4d; border-bottom: 1px solid #dbdbdb; padding: 26px 80px; background-color: #f5f5f5; box-sizing: border-box;}
 .likeTable label, .likeTable button{display: table-cell; vertical-align: middle;}/* like table */
-.likeTable input:focus + .checkIcon{border: 1px solid #3ba7f2;}
 .likeTable .btn{float: right;}
 
 /* footer */
