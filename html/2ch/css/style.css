@@ -69,9 +69,9 @@
 /* tab */
 .tabBtn{margin: 14px 0 29px; border-bottom: 1px solid #4d4d4d; clear: both; overflow: hidden;}
 .tabBtn li{float: left; width: 20%;}
-.tabBtn li button{width: 100%; padding: 12px 0; border-top: 1px solid #bebebe; border-left: 1px solid #bebebe; color: #808080; background-color: #e6e6e6; box-sizing: border-box; text-align: center;}
-.tabBtn li:last-child button{border-right: 1px solid #bebebe;}
-.tabBtn button.current, .tabBtn li button:focus, .tabBtn li button:hover{color: #ffffff; background-color: #4d4d4d; border-color: #4d4d4d; transition: all 0.4s;}
+.tabBtn li a{display: block; width: 100%; padding: 12px 0; border-top: 1px solid #bebebe; border-left: 1px solid #bebebe; color: #808080; background-color: #e6e6e6; box-sizing: border-box; text-align: center;}
+.tabBtn li:last-child a{border-right: 1px solid #bebebe;}
+.tabBtn a.current, .tabBtn li a:focus, .tabBtn li a:hover{color: #ffffff; background-color: #4d4d4d; border-color: #4d4d4d; transition: all 0.4s;}
 /* color */
 .color01{color: #4566a2;}
 .color02{color: #bebebe;}
