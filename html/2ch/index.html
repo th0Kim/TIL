@@ -32,13 +32,13 @@
                 
                 <h4 class="blind">IRP가입 진행순서</h4>
                 <div class="joinStepWrap">
-                    <ul class="joinStep">
+                    <ol class="joinStep">
                         <li><span class="blind">STEP 01</span><img src="img/ico_clear.jpg" alt="작성 완료"/></li>
                         <li class="current"><span class="step">STEP 02</span><span class="stepTit">계약정보입력</span></li>
                         <li><span class="blind">STEP</span><span class="stepNum">03</span></li>
                         <li><span class="blind">STEP</span><span class="stepNum">04</span></li>
                         <li><span class="blind">STEP</span><span class="stepNum">05</span></li>
-                    </ul>
+                    </ol>
                 </div>
                 
                 <h4 class="subTitle">계약자정보입력</h4>
@@ -106,22 +106,21 @@
                                 <tr>
                                     <th scope="row">자택주소</th>
                                     <td colspan="3">
-                                        <div class="adrFind"><input type="text" class="inputTxt info02" title="우편번호" readonly title="우편번호"/> <button type="button" class="btn smallSizeBtn marginL">주소찾기</button></div>
-                                        <div class="adrText"><input type="text" class="inputTxt info08" placeholder="도로명 주소" readonly title="도로명 주소"/> <input type="text" class="inputTxt info08 marginL" placeholder="상세 주소" title="상세 주소"/></div>
+                                        <div class="adrFind"><input type="text" class="inputTxt info02" title="우편번호" disabled title="우편번호"/> <button type="button" class="btn smallSizeBtn marginL"><span>주소찾기</span></button></div>
+                                        <div class="adrText"><input type="text" class="inputTxt info08" placeholder="도로명 주소" disabled title="도로명 주소"/> <input type="text" class="inputTxt info08 marginL" placeholder="상세 주소" title="상세 주소"/></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">직장주소</th>
                                     <td colspan="3">
-                                        <div class="adrFind"><input type="text" class="inputTxt info02" title="우편번호" readonly title="우편번호"/> <button type="button" class="btn smallSizeBtn marginL">주소찾기</button></div>
-                                        <div class="adrText"><input type="text" class="inputTxt info08" placeholder="도로명 주소" readonly title="도로명 주소"/><input type="text" class="inputTxt info08 marginL" placeholder="상세 주소" title="상세 주소"/></div>
+                                        <div class="adrFind"><input type="text" class="inputTxt info02" title="우편번호" disabled title="우편번호"/> <button type="button" class="btn smallSizeBtn marginL"><span>주소찾기</span></button></div>
+                                        <div class="adrText"><input type="text" class="inputTxt info08" placeholder="도로명 주소" disabled title="도로명 주소"/><input type="text" class="inputTxt info08 marginL" placeholder="상세 주소" title="상세 주소"/></div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </article>
-                
                 <h4 class="subTitle">정보수신여부</h4>
                 <article class="artiCon">
                     <div class="tableType">
@@ -173,7 +172,7 @@
                                 </tr>
                                 <tr>  
                                     <th scope="row">퇴직연금사업자</th>
-                                    <td><input type="text" class="inputTxt info05 bgGray" readonly title="퇴직연금사업자 번호"/> <button type="button" class="btn smallSizeBtn marginL">사업자검색</button></td>
+                                    <td><input type="text" class="inputTxt info05 bgGray" disabled title="퇴직연금사업자 번호"/> <button type="button" class="btn smallSizeBtn marginL"><span>사업자검색</span></button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -227,7 +226,7 @@
                                 <tr>
                                     <th scope="row">세금우대한도잔여</th>
                                     <td class="clfix">
-                                        <span class="wonSpace">0 원</span><button type="button" class="btn smallSizeBtn marginL">한도조회</button>
+                                        <span class="wonSpace">0 원</span><button type="button" class="btn smallSizeBtn marginL"><span>한도조회</span></button>
                                     </td>
                                     <th scope="row">세금우대한도설정</th>
                                     <td>
@@ -254,10 +253,10 @@
                 <article class="artiCon">
                     <div class="tabWrap">
                         <ul class="tabBtn">
-                            <li><button type="button" class="current">즉시출금</button></li>
-                            <li><button type="button">가상계좌</button></li>
+                            <li><a href="#tab01" class="current"><span>즉시출금</span></a></li>
+                            <li><a href="#tab02"><span>가상계좌</span></a></li>
                         </ul>
-                        <div class="tabArea">
+                        <div class="tabArea" id="tab01">
                             <div class="tableType">
                                 <table>
                                     <caption>납입금액, 계좌번호, 예금주명 입력</caption>
@@ -284,7 +283,7 @@
                                                 </div>
 
                                                 <input type="text" class="inputTxt info07 marginL" placeholder="- 없이 입력" title="계좌번호 입력란"/>
-                                                <button type="button" class="btn smallSizeBtn marginL">계좌확인</button>
+                                                <button type="button" class="btn smallSizeBtn marginL"><span>계좌확인</span></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -298,7 +297,7 @@
                             </div>
                             <p class="txt normalDot">개인추가납입은 IRP 계약심사 완료 후 납입금액이 출금되며, 계약이 완료됩니다.</p>
                         </div>
-                        <div class="tabArea" style="display: none;">
+                        <div class="tabArea" id="tab02" style="display: none;">
                             <div class="tableType">
                                 <table>
                                     <caption>납입금액, 계좌번호 입력</caption>
@@ -374,7 +373,7 @@
                                             <label for="selBoxBankAuto">은행선택<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
                                         </div>
                                         <input type="text" class="inputTxt info07 marginL" placeholder="- 없이 입력" title="계좌번호 입력란"/>
-                                        <button type="button" class="btn smallSizeBtn marginL">계좌확인</button>
+                                        <button type="button" class="btn smallSizeBtn marginL"><span>계좌확인</span></button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -409,7 +408,7 @@
 
                     <div class="likeTable">
                         <label for="autoAccept" class="checkLabel"><input type="checkbox" id="autoAccept" class="blind" checked/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>자동이체약관동의</label>
-                        <button type="button" class="btn smallSizeBtn bgWhite">전문보기</button>
+                        <button type="button" class="btn smallSizeBtn bgWhite"><span>전문보기</span></button>
                     </div>
                 </article>
 
@@ -426,3 +425,13 @@
     </div>
 </body>
 </html>
+<!--
+    REVIEW
+    1. input 속성 disabled 과 readonly
+       disabled 상태에서 데이터 업로드 후 disabled이 없어지거나 readonly로 변경 됨(개발사항에 따름) 
+    2. 헤딩 태그 아래 나오는 항목을 묶어주는 컨테이너 필요(div 추가함)
+    3. button의 공통 btn 클래스 사용, btn 사이즈별 클래스사용(smallSizeBtn,bigSizeBtn), default 외 배경 또는 추가 컬러 사항 클래스 사용(bgRed)
+       button 앞에 icon이 붙는 경우에 필요한 button안에 span태그 추가
+    4. step에 ul말고 ol태그 사용
+    5. tab버튼에 a태그 사용하여 click시 앵커태그로 바로 해당 tabArea로 이동 가능하게 함
+-->
