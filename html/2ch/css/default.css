@@ -38,7 +38,7 @@ a, button { margin: 0; -webkit-tap-highlight-color : rgba(0, 0, 0, 0); -webkit-t
 /*****************************************************************************************************************************************
 form 요소 절대값 정의
 *****************************************************************************************************************************************/
-button { padding:0 0; font-family:'NanumBarunGothic', sans-serif; font-weight:400; vertical-align:middle; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; cursor:pointer; background-color:transparent; color:#777; outline: none; } 
+button { padding:0 0; font-family:'NanumBarunGothic', sans-serif; font-weight:400; vertical-align:middle; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; cursor:pointer; background-color:transparent; color:#777;} 
 button span { box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; -ms-box-sizing:border-box; } 
 label { display:inline-block; vertical-align:middle; } 
 
@@ -58,3 +58,4 @@ input[type="text"]::-ms-clear { display:none; } /* 익스 10, 11에서 입풋창
 .alignL { text-align:left !important; } 
 .alignC { text-align:center !important; } 
 .alignR { text-align:right !important; } 
+
