@@ -51,7 +51,8 @@
 .checkIcon img{left: -14px;}
 .radioLabel input:checked + .radioIcon img, .checkLabel input:checked + .checkIcon img{left: 0px;}
 /* button */
-.btn:focus{border: 1px solid #3ba7f2;}
+.btn{border: 1px solid transparent;}
+.btn:focus{border-color: #3ba7f2;}
 .btnWrap{margin-top: 50px; text-align: center;}
 .smallSizeBtn{padding: 6px 10px 8px; border: 1px solid #a8adb0; background-color: #f2f2f2; color:#444544;}
 .smallSizeBtn:hover{background-color: #b9b9b9; transition: all 0.5s;}
