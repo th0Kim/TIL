@@ -1,14 +1,7 @@
 # Today I learn
-
-## TIL Start! 20180517
-
-### NEW docs
-HTML! CSS3! jQuery! Hello World!
-
-* Make GitHub 'TIL'
-* Use GitHub
-* Learn GitHub
-* Learn everything 
-
-#### git 링크 예제
-<a href="https://th0kim.github.io/TIL/follow-radioBtn/follow-radioBtn.html" target="_blank">git 링크 이동</a>
+## 2018.05.17 
+#### TIL Start!
+## 2018.07.30
+#### 웹표준, 웹접근성 연습 index
+ - 1차 link : https://th0kim.github.io/TIL/html/1ch/index.html 
+ - 2차 link : https://th0kim.github.io/TIL/html/2ch/index.html 
