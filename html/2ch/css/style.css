@@ -102,7 +102,7 @@
 .info06{max-width: 190px;}
 .info07{max-width: 199px;}
 .info08{max-width: 259px;}
-.wonSpace{display: inline-block; width: 100%; max-width: 205px; padding-left: 11px; box-sizing: border-box;}
+.wonSpace{display: inline-block; width: 100%; max-width: 135px; padding-left: 11px; box-sizing: border-box;}
 .likeTable{display: table; overflow: hidden; width: 100%; margin-top: 50px; border-top: 2px solid #4d4d4d; border-bottom: 1px solid #dbdbdb; padding: 26px 80px; background-color: #f5f5f5; box-sizing: border-box;}
 .likeTable label, .likeTable button{display: table-cell; vertical-align: middle;}/* like table */
 .likeTable input:focus + .checkIcon{border: 1px solid #3ba7f2;}
