@@ -63,12 +63,12 @@
                                     <th scope="row">휴대전화</th>
                                     <td>
                                         <div class="selectBox info01">
-                                            <select name="phone" id="selBox010" class="selBox">
+                                            <select name="phone" id="selBox010" class="selBox" title="앞자리선택">
                                                 <option value="">010</option>
                                                 <option value="">011</option>
                                                 <option value="">016</option>
                                             </select>
-                                            <label for="selBox010" title="앞자리선택">010<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                            <img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/>
                                         </div>
                                         <span class="color02 marginL">-</span>
                                         <input type="text" class="inputTxt info04 marginL" placeholder="- 없이 입력" title="-없이 휴대전화 입력란"/>
@@ -76,12 +76,12 @@
                                     <th scope="row">자택번호</th>
                                     <td>
                                         <div class="selectBox info01">
-                                            <select name="home" id="selBoxlocal" class="selBox">
+                                            <select name="home" id="selBoxlocal" class="selBox" title="앞자리선택">
                                                 <option value="">02</option>
                                                 <option value="">042</option>
                                                 <option value="">043</option>
                                             </select>
-                                            <label for="selBoxlocal" title="앞자리선택">02<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                            <img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/>
                                         </div>
                                         <span class="color02 marginL">-</span>
                                         <input type="text" class="inputTxt info04 marginL" placeholder="- 없이 입력" title="-없이 자택번호 입력란"/>
@@ -93,13 +93,13 @@
                                         <input type="text" class="inputTxt info05" title="이메일 아이디란"/><span class="marginL">@</span>
                                         <input type="text" class="inputTxt info05 marginL" title="이메일 주소란"/>
                                         <div class="selectBox info05 marginL">
-                                            <select name="email" id="selBoxEmail" class="selBox">
+                                            <select name="email" id="selBoxEmail" class="selBox" title="이메일주소 선택">
                                                 <option value="">직접입력</option>
                                                 <option value="">daum.net</option>
                                                 <option value="">naver.com</option>
                                                 <option value="">gmail.com</option>
                                             </select>
-                                            <label for="selBoxEmail" title="이메일주소 선택">직접입력<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                            <img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/>
                                         </div>
                                     </td>
                                 </tr>
@@ -135,19 +135,30 @@
                                     <th scope="row">정보수신동의</th>
                                     <td>
                                         <div class="radioWrap">
-                                            <label for="agree" class="radioLabel agree"><input type="radio" id="agree" name="choose" class="blind" checked="checked"/><span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span><b>동의</b></label>
-                                            <label for="disagree" class="radioLabel disagree"><input type="radio" id="disagree" name="choose" class="blind"/><span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span><b>동의안함</b></label>
+                                            <label for="agree" class="radioLabel agree">
+                                                <input type="radio" id="agree" name="choose" checked="checked"/>
+                                                <span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span>
+                                                <b>동의</b>
+                                            </label>
+                                            <label for="disagree" class="radioLabel disagree">
+                                                <input type="radio" id="disagree" name="choose"/>
+                                                <span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span>
+                                                <b>동의안함</b>
+                                            </label>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">매체선택</th>
                                     <td class="chkBoxWrap">
-                                        <label for="allAccept" class="checkLabel"><input type="checkbox" id="allAccept" name="accept" class="blind" checked/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>전체</label>
-                                        <label for="smsAccept" class="checkLabel"><input type="checkbox" id="smsAccept" name="accept" class="blind"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>문자메시지</label>
-                                        <label for="mailAccept" class="checkLabel"><input type="checkbox" id="mailAccept" name="accept" class="blind"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>이메일</label>
-                                        <label for="postHomeAccept" class="checkLabel"><input type="checkbox" id="postHomeAccept" name="accept" class="blind"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>우편(자택)</label>
-                                        <label for="postJobAccept" class="checkLabel"><input type="checkbox" id="postJobAccept" name="accept" class="blind"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>우편(직장)</label>
+                                        <label for="allAccept" class="checkLabel">
+                                            <input type="checkbox" id="allAccept" name="accept" checked="checked"/>
+                                            <span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>전체
+                                        </label>
+                                        <label for="smsAccept" class="checkLabel"><input type="checkbox" id="smsAccept" name="accept"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>문자메시지</label>
+                                        <label for="mailAccept" class="checkLabel"><input type="checkbox" id="mailAccept" name="accept"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>이메일</label>
+                                        <label for="postHomeAccept" class="checkLabel"><input type="checkbox" id="postHomeAccept" name="accept"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>우편(자택)</label>
+                                        <label for="postJobAccept" class="checkLabel"><input type="checkbox" id="postJobAccept" name="accept"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>우편(직장)</label>
                                     </td>
                                 </tr>
                             </tbody>
@@ -273,13 +284,13 @@
                                             <th scope="row">계좌번호</th>
                                             <td>
                                                 <div class="selectBox info07">
-                                                    <select name="bank01" id="selBoxBank01" class="selBox">
+                                                    <select name="bank01" id="selBoxBank01" class="selBox" title="은행선택">
                                                         <option value="">은행선택</option>
                                                         <option value="">신한은행</option>
                                                         <option value="">국민은행</option>
                                                         <option value="">카카오뱅크</option>
                                                     </select>
-                                                    <label for="selBoxBank01">은행선택<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                                    <img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/>
                                                 </div>
 
                                                 <input type="text" class="inputTxt info07 marginL" placeholder="- 없이 입력" title="계좌번호 입력란"/>
@@ -314,13 +325,13 @@
                                             <th scope="row">입금전용계좌</th>
                                             <td>
                                                 <div class="selectBox info05">
-                                                    <select name="bank02" id="selBoxBank" class="selBox">
+                                                    <select name="bank02" id="selBoxBank" class="selBox" title="은행선택">
                                                         <option value="">은행선택</option>
                                                         <option value="">신한은행</option>
                                                         <option value="">국민은행</option>
                                                         <option value="">카카오뱅크</option>
                                                     </select>
-                                                    <label for="selBoxBank">은행선택<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                                    <img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/>
                                                 </div>
                                             </td>
                                         </tr>
@@ -351,8 +362,8 @@
                                     <th scope="row">자동이체신청</th>
                                     <td colspan="3">
                                         <div class="radioWrap">
-                                            <label for="yesApply" class="radioLabel agree"><input type="radio" id="yesApply" name="apply" class="blind" checked="checked"/><span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span><b>동의</b></label>
-                                            <label for="noApply" class="radioLabel disagree"><input type="radio" id="noApply" name="apply" class="blind"/><span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span><b>동의안함</b></label>
+                                            <label for="yesApply" class="radioLabel agree"><input type="radio" id="yesApply" name="apply" checked="checked"/><span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span><b>동의</b></label>
+                                            <label for="noApply" class="radioLabel disagree"><input type="radio" id="noApply" name="apply"/><span class="radioIcon"><img src="img/radio.jpg" alt=" "/></span><b>동의안함</b></label>
                                         </div>
                                     </td>
                                 </tr>
@@ -364,13 +375,13 @@
                                     <th scope="row">계좌번호</th>
                                     <td colspan="3">
                                         <div class="selectBox info05">
-                                            <select name="bank03" id="selBoxBankAuto" class="selBox">
+                                            <select name="bank03" id="selBoxBankAuto" class="selBox" title="은행선택">
                                                 <option value="">은행선택</option>
                                                 <option value="">신한은행</option>
                                                 <option value="">국민은행</option>
                                                 <option value="">카카오뱅크</option>
                                             </select>
-                                            <label for="selBoxBankAuto">은행선택<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                            <img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/>
                                         </div>
                                         <input type="text" class="inputTxt info07 marginL" placeholder="- 없이 입력" title="계좌번호 입력란"/>
                                         <button type="button" class="btn smallSizeBtn marginL"><span>계좌확인</span></button>
@@ -386,13 +397,13 @@
                                     <th scope="row">이체일</th>
                                     <td>
                                         <div class="selectBox info07">
-                                            <select name="bank04" id="autoBank" class="selBox">
+                                            <select name="bank04" id="autoBank" class="selBox" title="은행선택">
                                                 <option value="">은행선택</option>
                                                 <option value="">신한은행</option>
                                                 <option value="">국민은행</option>
                                                 <option value="">카카오뱅크</option>
                                             </select>
-                                            <label for="autoBank">은행선택<img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/></label>
+                                            <img src="img/arrow_down.jpg" alt=" " class="arrow" tabindex="-1"/>
                                         </div>
                                     </td>
                                     <th scope="row">자동이체시작일</th>
@@ -407,7 +418,11 @@
                     </ul>
 
                     <div class="likeTable">
-                        <label for="autoAccept" class="checkLabel"><input type="checkbox" id="autoAccept" class="blind" checked/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>자동이체약관동의</label>
+                         <label for="autoAccept" class="checkLabel">
+                            <input type="checkbox" id="autoAccept" name="accept" checked="checked"/>
+                            <span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>자동이체약관동의
+                        </label>
+                        <!-- <label for="autoAccept" class="chkBoxWrap"><input type="checkbox" id="autoAccept" checked="checked"/><span class="checkIcon"><img src="img/check.jpg" alt=" "/></span>자동이체약관동의</label> -->
                         <button type="button" class="btn smallSizeBtn bgWhite"><span>전문보기</span></button>
                     </div>
                 </article>
