@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        *{padding: 0; margin: 0;}
+        h1{text-align: center; margin: 40px 0; padding: 10px; background-color: rgba(0, 0, 0, 0.1)}
+        h1 + h2 {margin-top: 0;}
+        h2{text-align: center; margin-top: 100px; padding-top: 20px; border-top: 1px solid #ddd;}
+        /* 박스 쉐도우 한면만 주기 */
+        .box-shadow {
+            background-color: #65aaff;
+            width: 160px;
+            height: 90px;
+            margin: 2rem auto;
+        }
+        .box-shadow:after {
+            content: "";
+            width: 150px;
+            height: 0px;
+            margin-top: 89px;
+            margin-left: -75px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            z-index: -1;
+            -webkit-box-shadow: 0px 0px 8px 2px #000000;
+            -moz-box-shadow: 0px 0px 8px 2px #000000;
+            box-shadow: 0px 0px 8px 2px #000000;
+        }
+        /* gradient button */
+        .btnWrap {width: 200px; height: 80px; margin: 0 auto;}
+        .btnWrap button{border: 0; outline: 0; width: 200px; height: 80px; background: linear-gradient(#df3b65, #2B2E4A) 0 100%; background-size: auto 200%; transition: all 0.4s;}
+        .btnWrap button:hover{background-position: 0 0;}
+        /* split-column */
+        .split-column{
+            width: 100%;
+            max-width: 660px;
+            margin: 2rem auto;
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+        }
+        /* table */
+        .tableType{width: 100%; max-width: 700px; margin: 0 auto; border-top: 1px solid #dad;}
+        .tableType table{width: 100%; border-spacing: 0;}
+        .tableType th{text-align: left;}
+        .tableType td{white-space: nowrap; border-left: 1px solid salmon;}
+        .tableType th, .tableType td{border-bottom: 1px solid #3aa; box-sizing: border-box; padding: 10px 0 10px 19px; }
+
+        /* 블러처리 */
+        .text_blur{color: transparent; text-shadow: 0 0 5px rgba(0,0,0,0.5);}
+
+        /* 이미지블러처리 */
+        .img_Wrap{text-align: center; position: relative; width: 200px; margin: 0 auto;}
+        .img_Wrap img{position: absolute; display: block; filter: blur(4px); -webkit-filter: blur(4px);} /* ie 지원 x */
+
+        footer{height: 120px; }
+    </style>
+</head>
+<body>
+    <h1>유용한css모음</h1>
+    <h2>박스 쉐도우 한면만 주기</h2>
+    <div class="box-shadow"></div>
+
+    <h2>gradient button</h2>
+    <div class="btnWrap">
+        <button type="button"></button>
+    </div>
+
+    <h2>split-column</h2>
+    <p class="split-column">
+    가장 이상의 속에서 구하지 칼이다. 인간이 같지 얼음에 청춘을 가치를 듣는다. 인류의 그러므로 속에서 것이다. 관현악이며, 사랑의 따뜻한 수 구할 용기가 것이다. 얼마나 있음으로써 위하여 얼음이 찾아 인간의 약동하다. 이상의 이 얼마나 피고것이다. 청춘이 못할 사랑의 무엇이 피는 찾아다녀도, 끓는 얼음과 ? 그들에게 이상을 듣기만 가치를 있으랴? 찾아다녀도, 공자는 지혜는 무엇을 것은 그들에게 이 것이 ? 기쁘며, 광야에서 타오르고 그들은 어디 것이다. 밥을 기쁘며, 그들은 뜨고, 있는 없는 속에 피다.용기가 인간이 인생에 찾아 피는 자신과 보이는 가장 말이다. 수 그들은 무한한 있을 그와 청춘의 것이다. 이상은 철환하였는가 영락과 시들어 심장의 아니더면, 광야에서 봄바람이다. 가치를 긴지라 소금이라 것은 커다란 실로 현저하게 피는 있다. 인류의 끓는 만천하의 불어 사막이다. 봄날의 생의 없으면 일월과 날카로우나 심장의 이것이다. 곧 피는 끓는 하였으며, 인생을 날카로우나 있음으로써 튼튼하며, 있는가? 얼마나 그들은 열락의 얼음과 희망의 보는 지혜는 피어나기 아름다우냐? 새가 생생하며, 방황하였으며, 풀이 무엇을 속에서 이것을 바이며, 피다. 살 철환하였는가 끓는 가지에 있다. 광야에서 돋고, 모래뿐일 귀는 그것을 낙원을 철환하였는가 이것이다. 심장의 것은 찾아다녀도, 약동하다.
+    </p>
+
+    <h2>table</h2>
+    <div class="tableType">
+        <table>
+            <thead>
+                <tr>
+                    <th>글자 길이에 맞춰 자동으로 조정됩니다.</th>
+                    <th>Lastname</th>
+                    <th>Savings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>peter</th>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <th>peter</th>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <th>peter</th>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <th>peter</th>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <th>peter</th>
+                    <td>Griffin</td>
+                    <td>$100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h2>블러처리</h2>
+    <p>Lorem ipsum dolor sit amet, mei assum gloriatur in, 
+        <span class="text_blur">cu pro labore equidem expetendis.His tota facilis maluisset no, ius et dolorum</span> 
+        conclusionemque, nec agam liber nusquam ei. Eum offendit placerat ut, sit eripuit corpora moderatius at. An qui possim dolorem persequeris, 
+        pri incorrupte eloquentiam ullamcorper ei. Ut amet posse cum, labitur definitiones ea vix.
+    </p>
+    <h2>이미지블러처리</h2>
+    <div class="img_Wrap">
+        <span class="img_blur"></span>
+        <img src="https://s.pstatic.net/static/www/img/2018/sp_main_v180508.png" alt="">
+    </div>
+
+    <footer></footer>
+</body>
+</html>
