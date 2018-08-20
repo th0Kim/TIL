@@ -39,9 +39,10 @@
     position: relative;
     z-index: 1;
     background-color: transparent;
-    width: 100%; 
+    width: 100%;
+    min-width: 63px;
     height: 31px; 
-    padding: 0 25px 0 10px;
+    padding: 0 0 0 10px;
     -moz-appearance:none; /* Firefox */
     -webkit-appearance:none; /* Safari and Chrome */
     appearance:none; /* select의 arrow 없앰 */
@@ -113,18 +114,19 @@
 .wonSpace{display: inline-block; width: 100%; max-width: 135px; padding-left: 11px; box-sizing: border-box;}
 .likeTable{display: table; overflow: hidden; width: 100%; margin-top: 50px; border-top: 2px solid #4d4d4d; border-bottom: 1px solid #dbdbdb; padding: 26px 80px; background-color: #f5f5f5; box-sizing: border-box;}
 .likeTable label, .likeTable button{display: table-cell; vertical-align: middle;}/* like table */
+.likeTable input{top:7px; z-index: 0;}
 .likeTable .btn{float: right;}
 
 /* footer */
 .footer{text-align: center; border-top: 1px solid #dcdcdc; background-color: #fbfbfb;}
 
 @media screen and (max-width: 1080px){
-/* header, footer */
-.header img, .footer img{display: block; width: 100%; height: auto;}
-/* container */
-.container{width: 95%;}
-/* lnb */
-.lnbWrap{display: none;}
-/* contents */
-.contents{width: 100%;}
+    /* header, footer */
+    .header img, .footer img{display: block; width: 100%; height: auto;}
+    /* container */
+    .container{width: 95%;}
+    /* lnb */
+    .lnbWrap{display: none;}
+    /* contents */
+    .contents{width: 100%;}
 }
