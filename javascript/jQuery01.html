@@ -29,7 +29,7 @@
    <script>
        var pointer = $("#pointer");
        $(document).mousemove(function(e){
-            pointer.stop().animate({left:e.pageX-10, top:e.pageY-10}, 50);
+            pointer.stop().animate({left:e.pageX-10, top:e.pageY-10}, 30);
 
             $('.box').mouseenter(function(){
                 pointer.addClass('on');
