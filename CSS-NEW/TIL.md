@@ -16,3 +16,8 @@
     2. 자식 선택기 (>)
     3. 인접 형제 선택기 (+)
     4. 일반 형제 선택 도구 (~)
+
+### 2018.08.23
+### clip 영역자름 효과
+    ex) clip: rect(0px, calc(1770px), calc(833px), 0px);
+    link : https://www.humble.tv/
