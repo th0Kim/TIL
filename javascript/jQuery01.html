@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <style>
+        #pointer{
+            position:absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            border-radius: 20px;
+        }
+        #pointer.on{width: 10px; height: 10px;}
+        .box{
+            width: 500px;
+            height: 200px;
+            background-color: #eaa;
+        }
+    </style>
+</head>
+<body>
+    <span id="pointer"></span>
+    <div class="box"></div>
+   <script>
+       var pointer = $("#pointer");
+       $(document).mousemove(function(e){
+            pointer.stop().animate({left:e.pageX-10, top:e.pageY-10}, 50);
+
+            $('.box').mouseenter(function(){
+                pointer.addClass('on');
+            }).mouseleave(function(){
+                pointer.removeClass('on');
+            })
+        })
+   </script>
+</body>
+</html>
