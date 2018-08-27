@@ -7,6 +7,7 @@
     <title></title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <style>
+        *{margin: 0; padding: 0; cursor: url(follow_web/one.png), auto;}
         #pointer{
             position:absolute;
             display: block;
@@ -15,7 +16,18 @@
             background-color: blue;
             border-radius: 20px;
         }
-        #pointer.on{width: 10px; height: 10px;}
+        #pointer:after{
+            content: ''; 
+            position: absolute; 
+            display: block; 
+            width: 3px; 
+            height: 3px; 
+            background-color: #aee;
+        }
+        #pointer.on{
+            width: 10px;
+            height: 10px;
+        }
         .box{
             width: 500px;
             height: 200px;
@@ -28,8 +40,10 @@
     <div class="box"></div>
    <script>
        var pointer = $("#pointer");
+       var pointerI = $("#pointer:after");
        $(document).mousemove(function(e){
             pointer.stop().animate({left:e.pageX-10, top:e.pageY-10}, 30);
+            pointerI.stop().animate({left:e.pageX-10, top:e.pageY-10}, 100);
 
             $('.box').mouseenter(function(){
                 pointer.addClass('on');
