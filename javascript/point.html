@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+  <div class="pitEnter ">
+						<table summary="포인트로 참여하기">
+							<caption>포인트로 참여하기</caption>
+							<colgroup>
+								<col style="width: 30%;">
+								<col style="width: 20%;">
+								<col style="width: 50%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th colspan="2">내 포인트</th>
+									<th>참여 포인트</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="pointWrap">
+									<th>개인</th>
+									<td><span class="point" data-point="8900">8900</span>P</td>
+									<td class="ctr">
+										<div class="input"><input type="number" class="pointNum1" onkeyup="point();" value="0" style="text-align: right"/></div>
+									</td>
+								</tr>
+								<tr>
+									<th>레벨업 퀘스트</th>
+									<td><span class="">500</span>P</td>
+									<td class="ctr">
+										<div class="input"><input type="number" class=""/></div>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th>필요 포인트</th>
+									<td>-100P</td>
+									<td class="ctr needPit">
+										<div class="input"><input type="text"/> <span class="npPit">/ 100</span></div>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+<script>
+	point_origin = function(e){
+		var originP = $('.point').attr('data-point'); // defalut
+		var pointArea = $('.point'); // 사용포인트
+		var usePoint = parseInt($('.pointNum1').val()); // 사용
+		var result = originP-usePoint; // 계산
+		
+		if( isNaN(pointArea) ){
+			pointArea.text(originP)
+		}
+		pointArea.text(result)
+	}
+	point = function(e){
+		var $this = $(this);
+		var $thisParent = $this.find('.pointWrap').length;
+		var originP = $('.point').attr('data-point'); // defalut
+		var pointArea = $('.point'); // 사용포인트
+		var usePoint = parseInt($('.pointNum1').val()); // 사용
+		var result = originP-usePoint; // 계산
+		
+		console.log($thisParent)
+		if( isNaN(pointArea) ){
+			pointArea.text(originP)
+		}
+		pointArea.text(result)
+	}
+</script>
+</body>
+</html>
