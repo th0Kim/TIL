@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery-1.10.2.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="divScreen">
+			<img src="images/favicon.png" alt=" "/>
+		</div>
+	</div>
+</body>
+</html>
+
+<script>
+	$(document).ready(function(){
+		var img_name = $('#divScreen img').attr('src');
+		var img = '<img '+ 'src="'+ img_name + '" alt=" "/>';
+		$('#divScreen').click(function(){
+			$('#divScreen').append(img);
+		});
+		
+	});
+
+</script>
+<!-- 
+<script>
+	$(document).ready(function(){
+   		var img_name = $('#divScreen img').attr('src');
+   		var img = '<img'+ 'src="'+ img_name + '" alt=" "/>';
+       $('.close_bt button').click(function(){
+       		
+			$('#divScreen').append(img);
+		});
+
+       console.log(img_name)
+    });
+</script>
+ -->
