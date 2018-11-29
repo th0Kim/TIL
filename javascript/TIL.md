@@ -24,3 +24,7 @@
 ### 2018.07.24
 * 생활코딩
  - https://opentutorials.org/course/3085
+
+### 2018.11.29
+* mobile에서 상단 주소창 
+ - https://developers.google.com/web/fundamentals/native-hardware/fullscreen/
