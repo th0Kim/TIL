@@ -24,3 +24,6 @@ animations link : https://www.w3schools.com/css/css3_animations.asp
  
  ##### index를 이용한 animation 
  - link : https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_z-index
+
+### Box-shadow
+ - link : https://codersblock.com/blog/creating-glow-effects-with-css/
