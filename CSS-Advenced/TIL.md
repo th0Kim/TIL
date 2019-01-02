@@ -15,3 +15,10 @@
 2D transforms link : https://www.w3schools.com/css/css3_2dtransforms.asp
 3D transforms link : https://www.w3schools.com/css/css3_3dtransforms.asp
 animations link : https://www.w3schools.com/css/css3_animations.asp
+
+### Animation
+ ##### word-spacing으로 animation 효과
+ - link : https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_word-spacing
+ 
+ ##### index를 이용한 animation 
+ - link : https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_z-index
