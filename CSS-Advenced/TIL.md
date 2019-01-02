@@ -16,6 +16,8 @@
 3D transforms link : https://www.w3schools.com/css/css3_3dtransforms.asp
 animations link : https://www.w3schools.com/css/css3_animations.asp
 
+## 2019.01.02
+
 ### Animation
  ##### word-spacing으로 animation 효과
  - link : https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_word-spacing
