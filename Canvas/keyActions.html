@@ -75,9 +75,10 @@
             }
        };
 
-       //키보드에 반응하기
+       //ball 객체 생성
        var ball = new Ball();
 
+       // 키보드 이름 변경 객체
        var keyActions = {
            32 : 'stop',
            37 : 'left',
@@ -86,6 +87,7 @@
            40 : 'down'
        };
 
+       // 키보드 핸들러
        $('body').keydown(function (event) {
             var direction = keyActions[event.keyCode];
             ball.setDirection(direction);
