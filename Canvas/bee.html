@@ -1,20 +1,16 @@
 <!doctype html>
 <html>
- 
     <head>
         <link rel="stylesheet" href="dist/semantic.css">
         <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
-        <script src="dist/semantic.js"></script>
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
     </head>
- 
 <body>
-    <canvas id="canvas" width='1000' height='1000'></canvas>
+    <canvas id="canvas" width='200' height='200'></canvas>
     <script>
-        var canvas = document.getElementById('canvas');
-        var ctx = canvas.getContext('2d');
+        
 
         // circle 함수
         var circle = function(x,y,radius, fillCircle){
@@ -54,6 +50,24 @@
             return coordinate;
         };
 
+        x = update(x);
+        y = update(y);
+
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        var x = 100;
+        var y = 100;
+
+        setInterval(function(){
+            ctx.clearRect(0,0,200,200);
+
+            drawBee(x,y);
+            x = update(x);
+            y = update(y);
+
+            ctx.strokeRect(0,0,200,200);
+        }, 30);
     </script>
 </body>
 </html>
