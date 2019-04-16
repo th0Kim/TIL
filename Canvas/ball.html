@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    </head>
+<body>
+    <canvas id="canvas" width='200' height='200'></canvas><!-- 영역 사이즈-->
+    <script>
+        // 공 생성자
+       var Ball = function(){
+           this.x = 100;
+           this.y = 100;
+           this.xSpeed = -5 * Math.random();
+           this.ySpeed = 5 * Math.random();
+       }
+
+       // 공그리기
+       var circle = function(x,y,radius,fillCircle){
+           ctx.beginPath();
+           ctx.arc(x,y,radius,0,Math.PI * 2, false);
+           if(fillCircle){
+               ctx.fill();
+           } else {
+               ctx.stroke();
+           }
+       };
+
+       Ball.prototype.draw = function(){
+           circle(this.x, this.y, ballSize, true);
+       }
+
+       // 공 움직이기
+       Ball.prototype.move = function(){
+           this.x += this.xSpeed;
+           this.y += this.ySpeed;
+       }
+
+       //공 튀기기 - 공이 벽에 충돌할 경우 움직임 값 제어
+       Ball.prototype.checkCollision = function(){
+           if (this.x < 0 || this.x > width) { // 영역 사이즈
+               this.xSpeed = -this.xSpeed;
+           }
+           if (this.y < 0 || this.y > height) { // 영역 사이즈
+               this.ySpeed = -this.ySpeed;
+           }
+       }
+
+       //공 애니메이션
+       var canvas = document.getElementById('canvas');
+       var ctx = canvas.getContext('2d');
+
+       var ball = new Ball(); // 공 객체 만들어 ball에 변수저장
+
+       setInterval(function(){
+           ctx.clearRect(0,0,width,height); // 영역 사이즈
+
+           // 함수 호출
+           ball.draw();
+           ball.move();
+           ball.checkCollision();
+
+           ctx.strokeRect(0,0,width,height); // 영역 사이즈
+       }, 30);
+        // 공의 영역
+        var width = canvas.width;
+        var height = canvas.height;
+        // 공 크기
+        var ballSize = 3;
+
+    </script>
+</body>
+</html>
