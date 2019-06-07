@@ -1,0 +1,105 @@
+// SASS는 전처리 언어로 변수와 같이 값을 저장하여 사용할 수 있다.
+$version: "1,2,3";
+$boxPadding: 20px;
+$color01: #ff0000;
+$color02: #008f00;
+$color03: #ffffff;
+$color04: yellow;
+$bgColor01: aquamarine;
+$bgColor02: sienna;
+
+/*! #{변수}를 쓰면 저장된 변수가 출력됨 version : #{$version} */
+[class*="box"] {
+    & a {
+        color: $color03;
+    }
+}
+.box01 {
+    border: 1px solid $color04;
+}
+%boxShadow {
+    padding: $boxPadding;
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.3);
+}
+// %으로 시작되는 placeholder selector
+.box03 {
+    @extend .box01; // @extend 다음에 나오는 id , class의 css를 가져옴
+    @extend %boxShadow; // @extend 다음에 나오는 %클래스명의 css를 가져옴
+}
+
+.box01 p{
+    color : $color01;
+
+    // 규칙 중첩 .box01 p strong 과 동일
+    strong {
+        background-color: $bgColor01;
+        color: $color02;
+        // 속성 중첩
+        font: 1.2rem serif {
+            weight: bold;
+            style: italic;
+        }
+    }
+
+    // 가상 클래스 부모선택자 : &:active &:empty &:first-child
+    // 가상 요소 &::after &::selection &::first-letter
+    &:active::after {
+        content: '';
+        display: block;
+        width: 100%; height: 2px; background-color: $bgColor01;
+    }
+}
+
+// 아이디,클래스,속성선택자 &#movie &.class &[type=radio]
+.box02 p {
+    color: $color02;
+    
+    &#link01 a{
+        background-color: $bgColor02;
+    }
+}
+
+// 접미사 &-sideBar &--default:hover
+.box02 .text {
+    &-sample {
+        color: red;
+    }
+}
+
+.twoBox {
+    & div {
+        height: 50px;
+        background-color: $color01;
+    }
+    & div + div {
+        background-color: $color02;
+    }
+}
+
+// 믹스인 (mixin)
+@mixin ellipse-one($wid:100%){
+	width:$wid; 
+	overflow:hidden; 
+	text-overflow:ellipsis; 
+	white-space:nowrap;
+}
+ 
+.text{
+	@include ellipse-one(80%);
+}
+// media query 응용
+@mixin media( $queryPoint ){
+	@media #{ $queryPoint } {
+		@content;
+	}
+}
+ 
+.twoBox {
+    @include media( "(max-width:1024px)" ){
+        clear: both;
+        & div {
+            width : 50%;
+            float: left;
+        }
+    }
+}
