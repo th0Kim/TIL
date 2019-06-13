@@ -1,55 +1,87 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /*! 변수를 쓰면 저장된 변수가 출력됨 version : 1,2,3 */
 [class*="box"] a {
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 .box01, .box03 {
-  border: 1px solid yellow; }
+  border: 1px solid #00ccff;
+}
 
 .box03 {
   padding: 20px;
-  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3); }
+  -webkit-box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+}
 
 .box01 p, .box03 p {
-  color: #ff0000; }
-  .box01 p strong, .box03 p strong {
-    background-color: aquamarine;
-    color: #008f00;
-    font: 1.2rem serif;
-      font-weight: bold;
-      font-style: italic; }
-  .box01 p:active::after, .box03 p:active::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: aquamarine; }
+  color: #ffd689;
+}
+
+.box01 p strong, .box03 p strong {
+  background-color: aquamarine;
+  color: #d8a6fa;
+  font: 1.2rem serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.box01 p:active::after, .box03 p:active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: aquamarine;
+}
 
 .box02 p {
-  color: #008f00; }
-  .box02 p#link01 a {
-    background-color: sienna; }
+  color: #d8a6fa;
+}
+
+.box02 p#link01 a {
+  background-color: red;
+}
 
 .box02 .text-sample {
-  color: red; }
+  color: #89ffa6;
+}
+
+.box02 + div {
+  border-top: 5px dotted red;
+}
 
 .twoBox div {
   height: 50px;
-  background-color: #ff0000; }
-.twoBox div + div {
-  background-color: #008f00; }
+  border-top: 1px solid #d8a6fa;
+}
+
+.twoBox div:nth-child(even) {
+  background-color: #ffd689;
+}
+
+.twoBox div:nth-child(odd) {
+  background-color: #00ccff;
+}
 
 .text {
   width: 80%;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; }
+  white-space: nowrap;
+}
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .twoBox {
-    clear: both; }
-    .twoBox div {
-      width: 50%;
-      float: left; } }
-
+    clear: both;
+  }
+  .twoBox div {
+    width: 50%;
+    float: left;
+  }
+}
 /*# sourceMappingURL=test.css.map */
