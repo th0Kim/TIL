@@ -1,13 +1,20 @@
 // SASS는 전처리 언어로 변수와 같이 값을 저장하여 사용할 수 있다.
 $version: "1,2,3";
 $boxPadding: 20px;
-$color01: #ff0000;
-$color02: #008f00;
+$color01: #ffd689;
+$color02: #d8a6fa;
 $color03: #ffffff;
-$color04: yellow;
+$color04: rgb(0, 204, 255);
+$color05: #89ffa6;
 $bgColor01: aquamarine;
-$bgColor02: sienna;
+$bgColor02: red; 
+$mediaTablet: 1280px;
+$clear: both;
 
+* {
+    margin: 0;
+    padding: 0;
+}
 /*! #{변수}를 쓰면 저장된 변수가 출력됨 version : #{$version} */
 [class*="box"] {
     & a {
@@ -62,41 +69,48 @@ $bgColor02: sienna;
 // 접미사 &-sideBar &--default:hover
 .box02 .text {
     &-sample {
-        color: red;
+        color: $color05;
     }
 }
 
+.box02 {
+    + div {
+        border-top: 5px dotted red;
+    }
+}
 .twoBox {
     & div {
         height: 50px;
+        border-top: 1px solid #d8a6fa;
+    }
+    & div:nth-child(even) {
         background-color: $color01;
     }
-    & div + div {
-        background-color: $color02;
+    & div:nth-child(odd) {
+        background-color: $color04;
     }
 }
 
-// 믹스인 (mixin)
+// 믹스인 (mixin) 말줄임 세팅
 @mixin ellipse-one($wid:100%){
-	width:$wid; 
-	overflow:hidden; 
+	width:$wid;
+	overflow:hidden;  
 	text-overflow:ellipsis; 
 	white-space:nowrap;
 }
- 
 .text{
-	@include ellipse-one(80%);
+	@include ellipse-one(80%); // 위 말줄임 세팅 가져오기, 믹스인은 @extend와 다르게 js의 함수처럼 매번 값을 다르게 줄 수 있다.
 }
+
 // media query 응용
 @mixin media( $queryPoint ){
 	@media #{ $queryPoint } {
 		@content;
 	}
 }
- 
-.twoBox {
-    @include media( "(max-width:1024px)" ){
-        clear: both;
+@include media( "(max-width: #{ $mediaTablet })" ){
+    .twoBox {
+        clear: $clear;
         & div {
             width : 50%;
             float: left;
