@@ -16,7 +16,6 @@
 
     .header {
         border-bottom: 1px solid #efefef;
-        z-index: 1;
 
         // HEADER CLEAR
         &:after {
@@ -31,6 +30,9 @@
             margin: 0 auto;
             & > * {
                 float: left;
+            }
+            @media screen and (max-width: 1146px){
+                width: 100%;
             }
         }
         // HEADER LOGO
@@ -103,7 +105,8 @@
         }
         // HEADER TOP NAVIGATION BAR
         & .tnb {
-            margin: 28px 0;
+            float: right;
+            margin: 28px 45px 28px 0;
             font-size: 14px;
             & a {
                 color: #fff;
@@ -119,32 +122,40 @@
         }
 
         // HEADER ON EVENT STYLE
-        &.on {
+        &.on,
+        &.top {
             background-color: $bgColor01;
-
+            @include transiType1(all, 0.5s, 0);
             & .gnb .depth01,
             & .gnb .depth01 a {
                 color: #444; 
             }
-
             & .tnb a {
                 color: #666666;
                 & + a:before {
                     background-color: #666666;
                 }
             }
-
             & .logo_hd {
                 background: url(../images/logo.png) no-repeat center;
             }
+        }
+        &.top {
+            position: fixed;
+            width: 100%;
+        }
+
+        // MOBILE
+        & .mo_close {
+            display: none;
         }
     }
 }
 // HEADER END
 /****** CONTENTS START *****/
 .contents {
-    height: 1000px;
-    line-height: 800px;
+    height: 1200px;
+    line-height: 1200px;
     text-align: center;
     font-size: 2em;
     color: #fff;

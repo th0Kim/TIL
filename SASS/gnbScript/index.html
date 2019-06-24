@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div id="Wrap">
         <div class="header_wrap">
-            <header class="header on">
+            <header class="header">
                 <div class="hdCenter">
                     <h1 class="logo_hd"><span class="blind">신한금융투자 인재채용</span></h1>
+                    <div class="mo_close"><span class="blind"></span></div>
+                    <div class="tnb">
+                        <a href="/">로그인</a>
+                        <a href="/">회원가입</a>
+                    </div>
                     <nav class="gnb">
                         <div class="depthWrap">
-                            <h2 class="depth01">신한금융투자소개</h2>
+                            <h2 class="depth01">신한금융투자소개 </h2>
                             <ul class="depth02">
                                 <li><a href="/">신한WAY</a></li>
                                 <li><a href="/">경영리더상</a></li>
@@ -49,10 +54,6 @@
                         
                          <div class="headerBg"></div>
                     </nav>
-                    <div class="tnb">
-                        <a href="/">로그인</a>
-                        <a href="/">회원가입</a>
-                    </div>
                 </div>
             </header>
             <!-- <div class="headerBg"></div> -->
@@ -65,12 +66,40 @@
     crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
-                gnb = $('.gnb');
-            gnb.mouseenter(function(){
-                $(this).addClass('on');
-            }).mouseleave(function(){
-                $(this).removeClass('on');
-            });
+            // GNB
+            var gnb = $('.gnb');
+            function gnbHover() {
+                gnb.mouseenter(function(){
+                    $(this).addClass('on');
+                }).mouseleave(function(){
+                    $(this).removeClass('on');
+                });
+            }
+            gnbHover();
+
+            // Scroll header
+            var header = $('.header');
+            function scrollHd() {
+                header.mouseenter(function(){
+                    $(this).addClass('on');
+                }).mouseleave(function(){
+                    $(this).removeClass('on');
+                });
+            }
+            scrollHd();
+
+            //-------header-------------------
+            var st = 0;
+            $(window).scroll(function(e){
+		        st = $(this).scrollTop();		
+                if(st > 0){
+                    header.addClass("top");
+                }else{
+                    header.removeClass("top");
+                }
+            })
+            
+
         });
     </script>
 </body>

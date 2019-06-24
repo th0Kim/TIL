@@ -25,8 +25,13 @@ $pointColor : #0078d4;
     transition-delay: $delay;
 }
 
-//hover effect
+// hover effect
 @mixin hoverEffect {
     @include transiType1;
     color: $pointColor;
+}
+
+// header bg color change
+%headerOn {
+    
 }
