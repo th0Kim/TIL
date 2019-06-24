@@ -42,9 +42,6 @@ ol, ul, li {
   left: 0;
   z-index: 5;
   width: 100%;
-}
-
-.header_wrap .header {
   border-bottom: 1px solid #efefef;
 }
 
@@ -130,6 +127,7 @@ ol, ul, li {
   left: 0;
   width: 100%;
   background-position: bottom -50px right 21%;
+  border-top: 1px solid #efefef;
 }
 
 .header_wrap .header .gnb.on .depth02 {
