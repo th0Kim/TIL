@@ -1,0 +1,152 @@
+// DEFAULT
+@import 'reset';
+
+/****** #Wrap *****/ 
+#Wrap{
+    position: relative;
+}
+
+/****** HEADER START *****/
+.header_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+
+    .header {
+        border-bottom: 1px solid #efefef;
+        z-index: 1;
+
+        // HEADER CLEAR
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+            overflow: hidden;
+        }
+        // HEADER ALIGN
+        & .hdCenter {
+            width : 1146px;
+            margin: 0 auto;
+            & > * {
+                float: left;
+            }
+        }
+        // HEADER LOGO
+        & .logo_hd {
+            width: 253px;
+            height: 80px;
+            background: url(../images/logo_white.png) no-repeat center;
+        }
+        
+        // GNB - GLOBAL NAVIGATION
+        & .gnb {
+            padding: 0 72px 0 98px;
+            & .depthWrap {
+                position: relative;
+                float: left;
+                & .depth01 {
+                    min-height: 80px;
+                    line-height: 80px;
+                    padding: 0 21px;
+                    font-size: 17px;
+                    color: #fff;
+                    & > a {
+                        color: #fff;
+                    }
+                    cursor: pointer;
+                    &:hover, &:hover > * {
+                        @include hoverEffect;
+                    }
+                }
+                & .depth02 {
+                    position: absolute;
+                    font-size: 14px;
+                    opacity: 0;
+
+                    & a:hover {
+                        @include hoverEffect;
+                    }
+                }
+            }
+            // HEADER GNB MENU BACKGROUND
+            & .headerBg {
+                position: absolute;
+                top: -300px;
+                left: 0;
+                width: 100%;
+                background-position: bottom -50px right 21%;
+            }
+
+            // GNB ON
+            &.on {
+                & .depth02 {
+                    z-index: 1;
+                    width: 100%;
+                    padding: 20px 0;
+                    opacity: 1;
+                    @include transiType1(opacity, 0.5s, 0.5s);
+                    & li {
+                        padding: 13px 0;
+                        text-align: center;
+                    }
+                }
+                & .headerBg {
+                    top: 80px;
+                    z-index: -1;
+                    height: 176px;
+                    background: url(../images/bg_gnb.png) no-repeat bottom -50px right 21% #fbfbfb;
+                    @include transiType1(all, 0.5s, 0.2s);
+                }
+            }
+        }
+        // HEADER TOP NAVIGATION BAR
+        & .tnb {
+            margin: 28px 0;
+            font-size: 14px;
+            & a {
+                color: #fff;
+                & + a:before {
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 9px;
+                    margin: 0 10px 0 6px;
+                    background-color: #fff;
+                }
+            }
+        }
+
+        // HEADER ON EVENT STYLE
+        &.on {
+            background-color: $bgColor01;
+
+            & .gnb .depth01,
+            & .gnb .depth01 a {
+                color: #444; 
+            }
+
+            & .tnb a {
+                color: #666666;
+                & + a:before {
+                    background-color: #666666;
+                }
+            }
+
+            & .logo_hd {
+                background: url(../images/logo.png) no-repeat center;
+            }
+        }
+    }
+}
+// HEADER END
+/****** CONTENTS START *****/
+.contents {
+    height: 1000px;
+    line-height: 800px;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    background-color: $contentsBg;
+}
