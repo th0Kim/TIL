@@ -60,45 +60,46 @@
         </div>
         <section class="contents"> 본문 </section>
     </div>
-    <script
-    src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
-        $(document).ready(function(){
-            // GNB
-            var gnb = $('.gnb');
-            function gnbHover() {
-                gnb.mouseenter(function(){
-                    $(this).addClass('on');
-                }).mouseleave(function(){
-                    $(this).removeClass('on');
-                });
+        // GNB hover open menu
+        var gnb = $('.gnb');
+        function gnbHover() {
+            gnb.mouseenter(function(){
+                $(this).addClass('on');
+            }).mouseleave(function(){
+                $(this).removeClass('on');
+            });
+        }
+        gnbHover();
+
+        // Scroll Header changed bg, scroll fixed top
+        var st = 0;
+        $(window).scroll(function(e){
+            st = $(this).scrollTop();		
+            if(st > 0){
+                header.addClass("top");
+            }else{
+                header.removeClass("top");
             }
-            gnbHover();
-
-            // Scroll header
-            var header = $('.header');
-            function scrollHd() {
-                header.mouseenter(function(){
-                    $(this).addClass('on');
-                }).mouseleave(function(){
-                    $(this).removeClass('on');
-                });
-            }
-            scrollHd();
-
-            //-------header-------------------
-            var st = 0;
-            $(window).scroll(function(e){
-		        st = $(this).scrollTop();		
-                if(st > 0){
-                    header.addClass("top");
-                }else{
-                    header.removeClass("top");
-                }
-            })
-            
-
         });
+
+
+        
+
+
+        
+
+        // Header hover changed bg
+        // var header = $('.header');
+        // function scrollHd() {
+        //     header.mouseenter(function(){
+        //         $(this).addClass('top');
+        //     }).mouseleave(function(){
+        //         $(this).removeClass('top');
+        //     });
+        // }
+        // scrollHd();
     </script>
 </body>
 </html>
