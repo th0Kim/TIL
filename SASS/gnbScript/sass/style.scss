@@ -125,6 +125,8 @@
         // HEADER ON EVENT STYLE
         &.on,
         &.top {
+            position: fixed;
+            width: 100%;
             background-color: $bgColor01;
             @include transiType1(all, 0.5s, 0);
             & .gnb .depth01,
@@ -142,8 +144,6 @@
             }
         }
         &.top {
-            position: fixed;
-            width: 100%;
         }
 
         // MOBILE

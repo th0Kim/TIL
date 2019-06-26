@@ -181,6 +181,8 @@ ol, ul, li {
 }
 
 .header_wrap .header.on, .header_wrap .header.top {
+  position: fixed;
+  width: 100%;
   background-color: #fff;
   -webkit-transition-property: all;
   transition-property: all;
@@ -206,11 +208,6 @@ ol, ul, li {
 
 .header_wrap .header.on .logo_hd, .header_wrap .header.top .logo_hd {
   background: url(../images/logo.png) no-repeat center;
-}
-
-.header_wrap .header.top {
-  position: fixed;
-  width: 100%;
 }
 
 .header_wrap .header .mo_close {
