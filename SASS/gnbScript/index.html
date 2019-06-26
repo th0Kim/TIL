@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,13 +85,12 @@
         scrollHd();
 
         // Scroll Header changed bg, scroll fixed on
-        var st = 0;
         $(window).scroll(function(e){
-            st = $(this).scrollTop();		
+            var st = $(this).scrollTop();
             if(st > 0){
-                header.addClass("on");
+                header.addClass("top");
             }else{
-                header.removeClass("on");
+                header.removeClass("top");
             }
         });
     </script>
