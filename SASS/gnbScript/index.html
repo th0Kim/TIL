@@ -73,6 +73,17 @@
         }
         gnbHover();
 
+        //Header hover changed bg
+        var header = $('.header');
+        function scrollHd() {
+            header.mouseenter(function(){
+                $(this).addClass('top');
+            }).mouseleave(function(){
+                $(this).removeClass('top');
+            });
+        }
+        scrollHd();
+        
         // Scroll Header changed bg, scroll fixed top
         var st = 0;
         $(window).scroll(function(e){
@@ -83,23 +94,7 @@
                 header.removeClass("top");
             }
         });
-
-
         
-
-
-        
-
-        // Header hover changed bg
-        // var header = $('.header');
-        // function scrollHd() {
-        //     header.mouseenter(function(){
-        //         $(this).addClass('top');
-        //     }).mouseleave(function(){
-        //         $(this).removeClass('top');
-        //     });
-        // }
-        // scrollHd();
     </script>
 </body>
 </html>
