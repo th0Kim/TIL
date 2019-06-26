@@ -77,24 +77,23 @@
         var header = $('.header');
         function scrollHd() {
             header.mouseenter(function(){
-                $(this).addClass('top');
+                $(this).addClass('on');
             }).mouseleave(function(){
-                $(this).removeClass('top');
+                $(this).removeClass('on');
             });
         }
         scrollHd();
-        
-        // Scroll Header changed bg, scroll fixed top
+
+        // Scroll Header changed bg, scroll fixed on
         var st = 0;
         $(window).scroll(function(e){
             st = $(this).scrollTop();		
             if(st > 0){
-                header.addClass("top");
+                header.addClass("on");
             }else{
-                header.removeClass("top");
+                header.removeClass("on");
             }
         });
-        
     </script>
 </body>
 </html>
