@@ -180,7 +180,7 @@ ol, ul, li {
   background-color: #fff;
 }
 
-.header_wrap .header.on, .header_wrap .header.top {
+.header_wrap .header.on {
   position: fixed;
   width: 100%;
   background-color: #fff;
@@ -193,20 +193,19 @@ ol, ul, li {
 }
 
 .header_wrap .header.on .gnb .depth01,
-.header_wrap .header.on .gnb .depth01 a, .header_wrap .header.top .gnb .depth01,
-.header_wrap .header.top .gnb .depth01 a {
+.header_wrap .header.on .gnb .depth01 a {
   color: #444;
 }
 
-.header_wrap .header.on .tnb a, .header_wrap .header.top .tnb a {
+.header_wrap .header.on .tnb a {
   color: #666666;
 }
 
-.header_wrap .header.on .tnb a + a:before, .header_wrap .header.top .tnb a + a:before {
+.header_wrap .header.on .tnb a + a:before {
   background-color: #666666;
 }
 
-.header_wrap .header.on .logo_hd, .header_wrap .header.top .logo_hd {
+.header_wrap .header.on .logo_hd {
   background: url(../images/logo.png) no-repeat center;
 }
 

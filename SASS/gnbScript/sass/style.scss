@@ -123,8 +123,7 @@
         }
 
         // HEADER ON EVENT STYLE
-        &.on,
-        &.top {
+        &.on {
             position: fixed;
             width: 100%;
             background-color: $bgColor01;
@@ -142,8 +141,6 @@
             & .logo_hd {
                 background: url(../images/logo.png) no-repeat center;
             }
-        }
-        &.top {
         }
 
         // MOBILE
