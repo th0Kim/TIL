@@ -11,52 +11,49 @@
     <div id="Wrap">
         <div class="header_wrap">
             <header class="header">
-                <div class="hdCenter">
-                    <h1 class="logo_hd"><span class="blind">신한금융투자 인재채용</span></h1>
-                    <div class="mo_close"><span class="blind">메뉴 닫기 버튼</span></div>
-                    <div class="tnb">
-                        <a href="/">로그인</a>
-                        <a href="/">회원가입</a>
-                    </div>
-                    <nav class="gnb">
-                        <div class="depthWrap">
-                            <h2 class="depth01">신한금융투자소개 </h2>
-                            <ul class="depth02">
-                                <li><a href="/">신한WAY</a></li>
-                                <li><a href="/">경영리더상</a></li>
-                                <li><a href="/">인사제도</a></li>
-                            </ul>
-                        </div>
-                        <div class="depthWrap">
-                            <h2 class="depth01">채용정보</h2>
-                            <ul class="depth02">
-                                <li><a href="/">채용프로세스</a></li>
-                                <li><a href="/">직무소개</a></li>
-                                <li><a href="/">채용공고</a></li>
-                            </ul>
-                        </div>
-                        <div class="depthWrap">
-                            <h2 class="depth01">인재DB</h2>
-                            <ul class="depth02">
-                                <li><a href="/">개요</a></li>
-                                <li><a href="/">인재DB</a></li>
-                                <li><a href="/">FAQ</a></li>
-                            </ul>
-                        </div>
-                        <div class="depthWrap">
-                            <h2 class="depth01"><a href="/">#신한SNS</a></h2>
-                            <!-- <ul class="depth02">
-                                <li><a href="/">신한WAY</a></li>
-                                <li><a href="/"></a></li>
-                                <li><a href="/"></a></li>
-                            </ul> -->
-                        </div>
-                        
-                         <div class="headerBg"></div>
-                    </nav>
+                <h1 class="logo_hd"><a href="/"><span class="blind">신한금융투자 인재채용</span></a></h1>
+                <div class="mo_close"><span class="blind">메뉴 닫기 버튼</span></div>
+                <div class="tnb">
+                    <a href="/">로그인</a>
+                    <a href="/">회원가입</a>
                 </div>
+                <nav class="gnb">
+                    <div class="depthWrap">
+                        <h2 class="depth01">신한금융투자소개 </h2>
+                        <ul class="depth02">
+                            <li><a href="/">신한WAY</a></li>
+                            <li><a href="/">경영리더상</a></li>
+                            <li><a href="/">인사제도</a></li>
+                        </ul>
+                    </div>
+                    <div class="depthWrap">
+                        <h2 class="depth01">채용정보</h2>
+                        <ul class="depth02">
+                            <li><a href="/">채용프로세스</a></li>
+                            <li><a href="/">직무소개</a></li>
+                            <li><a href="/">채용공고</a></li>
+                        </ul>
+                    </div>
+                    <div class="depthWrap">
+                        <h2 class="depth01">인재DB</h2>
+                        <ul class="depth02">
+                            <li><a href="/">개요</a></li>
+                            <li><a href="/">인재DB</a></li>
+                            <li><a href="/">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="depthWrap">
+                        <h2 class="depth01"><a href="/">#신한SNS</a></h2>
+                        <!-- <ul class="depth02">
+                            <li><a href="/">신한WAY</a></li>
+                            <li><a href="/"></a></li>
+                            <li><a href="/"></a></li>
+                        </ul> -->
+                    </div>
+                    
+                        <div class="headerBg"></div>
+                </nav>
             </header>
-            <!-- <div class="headerBg"></div> -->
         </div>
         <section class="contents"> 본문 </section>
     </div>
@@ -71,10 +68,9 @@
                 $(this).removeClass('on');
             });
         }
-        gnbHover();
 
         //Header hover changed bg
-        var header = $('.header');
+        var header = $('.header_wrap');
         function scrollHd() {
             header.mouseenter(function(){
                 $(this).addClass('on');
@@ -82,17 +78,20 @@
                 $(this).removeClass('on');
             });
         }
-        scrollHd();
 
         // Scroll Header changed bg, scroll fixed on
         $(window).scroll(function(e){
             var st = $(this).scrollTop();
             if(st > 0){
-                header.addClass("top");
+                header.addClass("on");
             }else{
-                header.removeClass("top");
+                header.removeClass("on");
             }
         });
+
+        gnbHover();
+        scrollHd();
+
     </script>
 </body>
 </html>

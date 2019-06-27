@@ -37,12 +37,27 @@ ol, ul, li {
 
 /****** HEADER START *****/
 .header_wrap {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
   width: 100%;
   border-bottom: 1px solid #efefef;
+}
+
+.header_wrap .header {
+  width: 1146px;
+  margin: 0 auto;
+}
+
+.header_wrap .header > * {
+  float: left;
+}
+
+@media screen and (max-width: 1146px) {
+  .header_wrap .header {
+    width: 100%;
+  }
 }
 
 .header_wrap .header:after {
@@ -52,22 +67,8 @@ ol, ul, li {
   overflow: hidden;
 }
 
-.header_wrap .header .hdCenter {
-  width: 1146px;
-  margin: 0 auto;
-}
-
-.header_wrap .header .hdCenter > * {
-  float: left;
-}
-
-@media screen and (max-width: 1146px) {
-  .header_wrap .header .hdCenter {
-    width: 100%;
-  }
-}
-
-.header_wrap .header .logo_hd {
+.header_wrap .header .logo_hd a {
+  display: block;
   width: 253px;
   height: 80px;
   background: url(../images/logo_white.png) no-repeat center;
@@ -180,7 +181,11 @@ ol, ul, li {
   background-color: #fff;
 }
 
-.header_wrap .header.on, .header_wrap .header.top {
+.header_wrap .header .mo_close {
+  display: none;
+}
+
+.header_wrap.on {
   background-color: #fff;
   -webkit-transition-property: all;
   transition-property: all;
@@ -190,31 +195,21 @@ ol, ul, li {
           transition-delay: 0;
 }
 
-.header_wrap .header.on .gnb .depth01,
-.header_wrap .header.on .gnb .depth01 a, .header_wrap .header.top .gnb .depth01,
-.header_wrap .header.top .gnb .depth01 a {
+.header_wrap.on .header .gnb .depth01,
+.header_wrap.on .header .gnb .depth01 a {
   color: #444;
 }
 
-.header_wrap .header.on .tnb a, .header_wrap .header.top .tnb a {
+.header_wrap.on .tnb a {
   color: #666666;
 }
 
-.header_wrap .header.on .tnb a + a:before, .header_wrap .header.top .tnb a + a:before {
+.header_wrap.on .tnb a + a:before {
   background-color: #666666;
 }
 
-.header_wrap .header.on .logo_hd, .header_wrap .header.top .logo_hd {
+.header_wrap.on .logo_hd a {
   background: url(../images/logo.png) no-repeat center;
-}
-
-.header_wrap .header.top {
-  position: fixed;
-  width: 100%;
-}
-
-.header_wrap .header .mo_close {
-  display: none;
 }
 
 /****** CONTENTS START *****/

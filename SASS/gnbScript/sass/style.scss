@@ -8,7 +8,7 @@
 
 /****** HEADER START *****/
 .header_wrap {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 5;
@@ -16,7 +16,14 @@
     border-bottom: 1px solid #efefef;
 
     .header {
-
+        width : 1146px;
+        margin: 0 auto;
+        & > * {
+            float: left;
+        }
+        @include  mq('desktop'){
+            width: 100%;
+        }
         // HEADER CLEAR
         &:after {
             content: '';
@@ -24,22 +31,16 @@
             clear: both;
             overflow: hidden;
         }
-        // HEADER ALIGN
-        & .hdCenter {
-            width : 1146px;
-            margin: 0 auto;
-            & > * {
-                float: left;
-            }
-            @media screen and (max-width: 1146px){
-                width: 100%;
-            }
-        }
+
         // HEADER LOGO
         & .logo_hd {
-            width: 253px;
-            height: 80px;
-            background: url(../images/logo_white.png) no-repeat center;
+            & a {
+                display: block;
+                width: 253px;
+                height: 80px;
+                background: url(../images/logo_white.png) no-repeat center;
+            }
+           
         }
         
         // GNB - GLOBAL NAVIGATION
@@ -122,32 +123,30 @@
             }
         }
 
-        // HEADER ON EVENT STYLE
-        &.on, &.top {
-            background-color: $bgColor01;
-            @include transiType1(all, 0.5s, 0);
-            & .gnb .depth01,
-            & .gnb .depth01 a {
-                color: #444; 
-            }
-            & .tnb a {
-                color: #666666;
-                & + a:before {
-                    background-color: #666666;
-                }
-            }
-            & .logo_hd {
-                background: url(../images/logo.png) no-repeat center;
-            }
-        }
-        &.top {
-            position: fixed;
-            width: 100%;
-        }
-
         // MOBILE
         & .mo_close {
             display: none;
+        }
+    }
+
+    // HEADER_WRAP ON EVENT STYLE
+    &.on {
+        background-color: $bgColor01;
+        @include transiType1(all, 0.5s, 0);
+        & .header .gnb .depth01,
+        & .header .gnb .depth01 a {
+            color: #444; 
+        }
+        & .tnb a {
+            color: #666666;
+            & + a:before {
+                background-color: #666666;
+            }
+        }
+        & .logo_hd {
+            & a {
+                background: url(../images/logo.png) no-repeat center;
+            }
         }
     }
 }
