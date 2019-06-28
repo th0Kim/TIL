@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>다중 탭</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .tabWrap{margin-bottom: 50px;}
+        .tabArea{width: 300px; height: 300px;}
+        .tab1{background-color: #eee;}
+        .tab2{background-color: #eaa;}
+        .tab3{background-color: #aae;}
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="tabWrap">
+        <div class="btnWrap">
+            <button type="button">버튼1</button>
+            <button type="button">버튼2</button>
+            <button type="button">버튼3</button>
+        </div>
+        <div class="tabArea tab1">
+            탭 내용1
+        </div>
+        <div class="tabArea tab2" style="display: none;">
+            탭 내용2
+        </div>
+        <div class="tabArea tab3" style="display: none;">
+            탭 내용3
+        </div>
+    </div>
+    
+    <div class="tabWrap">
+        <div class="btnWrap">
+            <button type="button">버튼1</button>
+            <button type="button">버튼2</button>
+            <button type="button">버튼3</button>
+        </div>
+        <div class="tabArea tab1">
+            탭 내용1
+        </div>
+        <div class="tabArea tab2" style="display: none;">
+            탭 내용2
+        </div>
+        <div class="tabArea tab3" style="display: none;">
+            탭 내용3
+        </div>
+    </div>
+
+    <div class="tabWrap">
+        <div class="btnWrap">
+            <button type="button">버튼1</button>
+            <button type="button">버튼2</button>
+            <button type="button">버튼3</button>
+        </div>
+        <div class="tabArea tab1">
+            탭 내용1
+        </div>
+        <div class="tabArea tab2" style="display: none;">
+            탭 내용2
+        </div>
+        <div class="tabArea tab3" style="display: none;">
+            탭 내용3
+        </div>
+    </div>
+    <script>
+        var app = app || {};
+
+        app.init = function(){
+
+            var tabBtn = $(".btnWrap").find("button");
+
+            app.handleClicked = function(){
+                var btnIdx = $(this).index(); // 0 1 2
+                var btnParent = $(this).closest(".tabWrap"); // .parents(".tabWrap") 대신 .closest(".tabWrap") 가능
+
+                btnParent.children(".tabArea").hide().eq(btnIdx).show(); // .children(".tabArea") 대신 .find(".tabArea") 가능
+            };
+            
+            $('body').find(tabBtn).on("click", app.handleClicked);
+          
+        }
+
+        app.init();
+
+    </script>
+</body>
+</html>

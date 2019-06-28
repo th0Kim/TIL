@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/semantic.css">
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    </head>
+<body>
+    <canvas id="canvas" width='200' height='200'></canvas>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        
+        var position = 0;
+        
+        setInterval(function(){
+            ctx.clearRect(0, 0, 200, 200);
+            ctx.fillRect(position, 0, 20, 20);
+
+            position++;
+            if(position > 200){
+                position = 0;
+            }
+        }, 30);
+
+    </script>
+</body>
+</html>

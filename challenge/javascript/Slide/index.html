@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>Slide</title>
+<style type="text/css">
+/* Reset */
+body,div,form,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,em,p,span,textarea,pre,label,fieldset,th,td,button,a,input,select,hr{margin:0;padding:0;font-family:Arial, dotum;}
+body{line-height:1;}
+em,address{font-style:normal;}
+ol,ul,dl{list-style:none;}
+fieldset,img,hr,button{border:0;}
+img{vertical-align:top;}
+a{text-decoration:none; color:#2c2c2c;}
+a:hover{text-decoration:none;}
+button{margin:0;padding:0;background:none;border-radius:0;cursor:pointer;overflow:visible;outline:none;}
+
+.initSlide {position:relative; overflow:hidden; width:500px; height:500px;}
+.initSlide .btnPrev,
+.initSlide .btnNext {position:absolute; top:200px; z-index:10; width:50px; height:50px; background:#fff;}
+.initSlide .btnPrev {left:10px;}
+.initSlide .btnNext {right:10px;}
+.initSlide .countWrap {position:absolute; bottom:10px; left:0; z-index:10; width:100%; text-align:center;}
+.initSlide .countWrap .btnCountCtrl {width:20px; height:20px; background:#fff; border-radius:50%; font-size:0; line-height:0;}
+.initSlide .countWrap .btnCountCtrl.current {background:red;}
+.initSlide .viewListWrap {position:relative; overflow:hidden; width:500px; height:500px;}
+.initSlide .viewListWrap ul{position: absolute; width: 1500px;}
+.initSlide .viewListWrap ul li{float: left;}
+.initSlide .viewListWrap ul li img {width:500px; height:500px;}
+
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="./common/js/ui_2.js"></script>
+</head>
+<body>
+<!-- 첫번째 슬라이드 -->
+<div class="initSlide">
+  <button type="button" class="btnPrev">이전</button>
+  <button type="button" class="btnNext">다음</button>
+
+  <div class="countWrap">
+      <button type="button" class="btnCountCtrl current">1</button>
+      <button type="button" class="btnCountCtrl">2</button>
+      <button type="button" class="btnCountCtrl">3</button>
+  </div>
+
+  <div class="viewListWrap">
+    <ul>
+      <li class="view"><img src="./common/images/1.jpg" alt="" /></li>
+      <li class="view"><img src="./common/images/2.jpg" alt="" /></li>
+      <li class="view"><img src="./common/images/3.jpg" alt="" /></li>
+    </ul>
+  </div>
+</div>
+<!-- // 첫번째 슬라이드 -->
+
+<!-- 두번째 슬라이드 -->
+<div class="initSlide">
+  <button type="button" class="btnPrev">이전</button>
+  <button type="button" class="btnNext">다음</button>
+
+  <div class="countWrap">
+      <button type="button" class="btnCountCtrl current">1</button>
+      <button type="button" class="btnCountCtrl">2</button>
+      <button type="button" class="btnCountCtrl">3</button>
+  </div>
+
+  <div class="viewListWrap">
+    <ul>
+      <li class="view"><img src="./common/images/3.jpg" alt="" /></li>
+      <li class="view"><img src="./common/images/2.jpg" alt="" /></li>
+      <li class="view"><img src="./common/images/1.jpg" alt="" /></li>
+    </ul>
+  </div>
+</div>
+<!-- // 두번째 슬라이드 -->
+
+</body>
+</html>

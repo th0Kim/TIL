@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/semantic.css">
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    </head>
+<body>
+    <canvas id="canvas" width='200' height='200'></canvas>
+    <script>
+        
+
+        // circle 함수
+        var circle = function(x,y,radius, fillCircle){
+                        ctx.beginPath();
+                        ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+                        if (fillCircle){
+                            ctx.fill();
+                        } else {
+                            ctx.stroke();
+                        }
+                    };
+        
+        // 벌그리기
+        var drawBee = function(x, y){
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'Black';
+            ctx.fillStyle = 'Gold';
+            
+            circle(x, y, 8, true);
+            circle(x, y, 8, false);
+            circle(x - 5, y - 11, 5, false);
+            circle(x + 5, y - 11, 5, false);
+            circle(x - 2, y - 1, 2, false);
+            circle(x + 2, y - 1, 2, false);
+        };
+        
+        // 벌 위치 바꾸기
+        var update = function(coordinate){
+            var offset = Math.random() * 4 - 2;
+            coordinate += offset;
+            if(coordinate > 200){
+                coordinate = 200;
+            }
+            if(coordinate < 0){
+                coordinate = 0;
+            }
+            return coordinate;
+        };
+
+        x = update(x);
+        y = update(y);
+
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        var x = 100;
+        var y = 100;
+
+        setInterval(function(){
+            ctx.clearRect(0,0,200,200);
+
+            drawBee(x,y);
+            x = update(x);
+            y = update(y);
+
+            ctx.strokeRect(0,0,200,200);
+        }, 30);
+    </script>
+</body>
+</html>

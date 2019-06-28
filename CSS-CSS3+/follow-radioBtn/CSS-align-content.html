@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3 align-content</title>
+	<style>
+		*{padding: 0; font-family: sans-serif;}
+		ol, ul, li{list-style: none;}
+		.wrap{margin: 0 20px;}
+		.flex-container {
+		  display: flex;
+		  height: 600px;
+		  flex-wrap: wrap;
+		  background-color: DodgerBlue;
+		}
+
+		.flex-container li {
+		  background-color: #f1f1f1;
+		  width: 100px;
+		  margin: 10px;
+		  text-align: center;
+		  line-height: 75px;
+		  font-size: 30px;
+		}
+		/* IE11 부터 O */
+		.flex-container.space-between{align-content: space-between;}
+		.flex-container.space-around{align-content: space-around;}
+		.flex-container.space-stretch{align-content: space-stretch;}
+		.flex-container.center{align-content: center;}
+		.flex-container.flex-start{align-content: flex-start;}
+		.flex-container.flex-end{align-content: flex-end;}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<h1>align-content</h1>
+		<hr />
+		<br />
+		<h2>align-content: space-between;</h2>
+		<br />
+		<ul class="flex-container space-between">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+		<br />
+		<h2>align-content: space-around;</h2>
+		<br />
+		<ul class="flex-container space-around">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+		<br />
+		<h2>align-content: space-stretch;</h2>
+		<br />
+		<ul class="flex-container space-stretch">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+		<br />
+		<h2>align-content: center;</h2>
+		<br />
+		<ul class="flex-container center">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+		<br />
+		<h2>align-content: flex-start;</h2>
+		<br />
+		<ul class="flex-container flex-start">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+		<br />
+		<h2>align-content: flex-end;</h2>
+		<br />
+		<ul class="flex-container flex-end">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+		</ul>
+		
+	</div>
+		
+
+
+</body>
+</html>

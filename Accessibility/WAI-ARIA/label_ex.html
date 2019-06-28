@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>레이블 제공</title>
+</head>
+<body>
+	<div>
+		<div  id="user‐name">이름</div>
+		<input  type="text" id="name" aria‐labelledby="user‐name">
+	</div>
+
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	
+	<!-- aria‐describedby의 값과 아래 설명span의 id값이 동일하게 적용 -->
+	<label  for="usr‐pwd">비밀번호</label>   
+	<input  type="password" id="usr‐pwd" name="usr‐pwd" aria‐describedby="message">   
+	<span  id="message"  class="guide">6~12자  이내로  문,  숫자를  혼합하여  사용   </span>
+
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	
+	<!-- 이미지에 label 사용방법 -->
+	<div>
+		<img src="sunflowers.jpg" aria-labelledby="flower">
+		<span id="flower">img's explanation</span>
+	</div>
+	<!-- a태그 아이콘에 label 사용방법 -->
+	<a href="#">
+		<span role="img" aria-label="Connect via Link"></span>
+	</a>
+	
+</body>
+</html>
