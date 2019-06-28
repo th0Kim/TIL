@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #444444;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 0;
+  text-indent: -99999px;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+
+/****** #Wrap *****/
+#Wrap {
+  position: relative;
+}
+
+/****** HEADER START *****/
+.header_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+}
+
+.header_wrap .header {
+  width: 1146px;
+  margin: 0 auto;
+}
+
+.header_wrap .header > * {
+  float: left;
+}
+
+@media screen and (max-width: 1146px) {
+  .header_wrap .header {
+    width: 100%;
+  }
+}
+
+.header_wrap .header:after {
+  content: '';
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+
+.header_wrap .header .logo_hd a {
+  display: block;
+  width: 253px;
+  height: 80px;
+  background: url(../images/logo_white.png) no-repeat center;
+}
+
+.header_wrap .header .gnb {
+  padding: 0 72px 0 98px;
+}
+
+.header_wrap .header .gnb .depthWrap {
+  position: relative;
+  float: left;
+}
+
+.header_wrap .header .gnb .depthWrap .depth01 {
+  min-height: 80px;
+  line-height: 80px;
+  padding: 0 21px;
+  font-size: 17px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header_wrap .header .gnb .depthWrap .depth01 > a {
+  color: #fff;
+}
+
+.header_wrap .header .gnb .depthWrap .depth01:hover, .header_wrap .header .gnb .depthWrap .depth01:hover > * {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  color: #0078d4;
+}
+
+.header_wrap .header .gnb .depthWrap .depth02 {
+  position: absolute;
+  font-size: 14px;
+  opacity: 0;
+}
+
+.header_wrap .header .gnb .depthWrap .depth02 a:hover {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  color: #0078d4;
+}
+
+.header_wrap .header .gnb .headerBg {
+  position: absolute;
+  top: -300px;
+  left: 0;
+  width: 100%;
+  background-position: bottom -50px right 21%;
+  border-top: 1px solid #efefef;
+}
+
+.header_wrap .header .gnb.on .depth02 {
+  z-index: 1;
+  width: 100%;
+  padding: 20px 0;
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.header_wrap .header .gnb.on .depth02 li {
+  padding: 13px 0;
+  text-align: center;
+}
+
+.header_wrap .header .gnb.on .headerBg {
+  top: 80px;
+  z-index: -1;
+  height: 176px;
+  background: url(../images/bg_gnb.png) no-repeat bottom -50px right 21% #fbfbfb;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.header_wrap .header .tnb {
+  float: right;
+  margin: 33px 45px 33px 0;
+  font-size: 14px;
+}
+
+.header_wrap .header .tnb a {
+  color: #fff;
+}
+
+.header_wrap .header .tnb a + a:before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 9px;
+  margin: 0 10px 0 6px;
+  background-color: #fff;
+}
+
+.header_wrap .header .mo_close {
+  display: none;
+}
+
+.header_wrap.on {
+  background-color: #fff;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+.header_wrap.on .header .gnb .depth01,
+.header_wrap.on .header .gnb .depth01 a {
+  color: #444;
+}
+
+.header_wrap.on .tnb a {
+  color: #666666;
+}
+
+.header_wrap.on .tnb a + a:before {
+  background-color: #666666;
+}
+
+.header_wrap.on .logo_hd a {
+  background: url(../images/logo.png) no-repeat center;
+}
+
+/****** CONTENTS START *****/
+.contents {
+  height: 1200px;
+  line-height: 1200px;
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+  background-color: #8899ad;
+}
+/*# sourceMappingURL=style.css.map */

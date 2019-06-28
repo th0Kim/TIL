@@ -1,0 +1,49 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    color: #444444;
+    line-height: 1;
+}
+a {
+    text-decoration: none;
+}
+ol, ul, li {
+    list-style: none;
+}
+
+.blind {position: absolute; width: 1px; height: 0; text-indent: -99999px; overflow: hidden;}
+.clearfix:after {content: ''; display: block; clear: both; overflow: hidden;}
+
+$bgColor01 : #fff;
+$contentsBg : #8899ad;
+$pointColor : #0078d4;
+
+@mixin transiType1($type: all,$duration:0.5s,$delay: 0) {
+    transition-property: $type;
+    transition-duration: $duration;
+    transition-delay: $delay;
+}
+
+// hover effect
+@mixin hoverEffect {
+    @include transiType1;
+    color: $pointColor;
+}
+
+//midea Query
+@mixin mq($screen-width){
+    @if $screen-width == 'desktop' {
+        @media screen and (max-width: 1146px){
+            @content;
+        }
+    }
+    @else if $screen-width == 'phone' {
+        @media screen and (min-width: 600px) {
+            @content;
+        }
+    }
+    @else {
+        @content;
+    }
+}
