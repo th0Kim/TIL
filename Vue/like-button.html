@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>좋아요</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div v-if="liked">좋아요 눌렀음</div><!-- data false 상태 : 출력 x -->
+        <button v-else v-on:click="onClickButton">Like</button>
+    </div>
+</body>
+<script>
+    // 화면은 vue가 알아서 할테니 data 중심으로 사고하기
+    const app = new Vue({
+        el: '#root', // 필수 el:
+        data: { // 필수 data:
+            liked : false,// 관리 할 내용 추가
+        },
+        methods: {
+            onClickButton() {
+                this.liked = true; // click 시 데이터만 넣었는데 별도 css없이도 vue가 알아서 on/off 처리를 해줌
+            },
+        },
+    });
+</script>
+</html>

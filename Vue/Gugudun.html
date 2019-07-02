@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>구구단</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!-- 
+            1. 바뀌는 부분을 찾는다
+            2. 바뀌는 부분은 데이타
+        -->
+        <div>{{first}}곱하기 {{second}}는 ?</div> <!-- 데이터 {{data 명}} {{자바스크립트 연산도 쓸 수 있음}}-->
+        <form v-on:submit="onSubmitForm">
+            <input type="number" ref="answer" v-model="value">
+            <button type="submit">입력</button>
+            <!-- <div>{{value}}</div> 실제 위 v-model의 value 값이 잘 들어오는지 확인 가능하다.-->
+        </form>
+        <div id="result">{{result}}</div>
+    </div>
+</body>
+<script>
+    const app = new Vue({
+        el: '#root', // 필수 el:
+        data: { // 필수 data:
+            first : Math.ceil(Math.random() * 9),
+            second: Math.ceil(Math.random() * 9),
+            value: '', // tag 안에 v-model="value"로 연결, 브라우저에서 입력시 data로 값이 들어온다.
+            result: '',
+        },
+        methods : {
+            // * 데이터가 변경되는 갯수를 정확히 알고 있어야 한다. (현재 4개)
+            onSubmitForm(e) {
+                // console.log(this);
+                // console.log(this.first, this.second, this.value);
+                e.preventDefault(); //새로고침 막긔
+                if (this.first * this.second === parseInt(this.value)) {
+                    // 정답 일때 결과
+                    this.result = '정답';
+
+                    // 정답 일때 다음문제 
+                    this.first = Math.ceil(Math.random() * 9);
+                    this.second = Math.ceil(Math.random() * 9);
+                    this.value = '';
+
+                    // 커서 포커스
+                    this.$refs.answer.focus();
+                }else {
+                    // 땡 일때 결과
+                    this.result = "땡";
+
+                    //땡 일때 다시 입력 
+                    this.value = '';
+
+                    // 커서 포커스
+                    this.$refs.answer.focus();
+                }
+            },
+        },
+    });
+</script>
+</html>
