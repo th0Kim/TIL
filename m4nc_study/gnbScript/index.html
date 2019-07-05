@@ -50,15 +50,17 @@
                             <li><a href="/"></a></li>
                         </ul> -->
                     </div>
-                    
-                        <div class="headerBg"></div>
+                    <div class="headerBg"></div>
                 </nav>
             </header>
+            <!-- <div class="headerBg"></div> -->
         </div>
         <section class="contents"> 본문 </section>
     </div>
     <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script>
+    <script src="js/ui-1.js"></script>
+    <!-- <script>
+        // 수정 전
         // GNB hover open menu
         var gnb = $('.gnb');
         function gnbHover() {
@@ -79,7 +81,8 @@
             });
         }
 
-        // Scroll Header changed bg, scroll fixed on
+        // Scroll Header changed bg, scroll fixed 
+
         $(window).scroll(function(e){
             var st = $(this).scrollTop();
             if(st > 0){
@@ -88,10 +91,6 @@
                 header.removeClass("on");
             }
         });
-
-        gnbHover();
-        scrollHd();
-
-    </script>
+    </script> -->
 </body>
 </html>
