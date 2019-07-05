@@ -34,12 +34,12 @@ $pointColor : #0078d4;
 //midea Query
 @mixin mq($screen-width){
     @if $screen-width == 'desktop' {
-        @media screen and (max-width: 1146px){
+        @media screen and (min-width: 1146px){
             @content;
         }
     }
-    @else if $screen-width == 'phone' {
-        @media screen and (min-width: 600px) {
+    @else if $screen-width == 'mobile' {
+        @media screen and (max-width: 1145px) {
             @content;
         }
     }

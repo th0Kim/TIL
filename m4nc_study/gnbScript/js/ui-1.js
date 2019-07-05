@@ -2,6 +2,7 @@
 
     var $header = $('.header_wrap');
     var $gnb = $('.gnb');
+    var $MenuBtn = $('.mo_btn button');
     var activeClass = 'on';
 
     function handleEvent(e) {
@@ -19,6 +20,15 @@
         }
     } 
 
-    $gnb.on("mouseenter mouseleave", handleEvent);
-    $header.on("mouseenter mouseleave", handleEvent);
-    $(window).on("scroll", handleEvent);
+
+
+    const mq = window.matchMedia( "(max-width: 1145px)" );
+
+        if (mq.matches) { // Mobile
+            $MenuBtn.on("click", handleEvent);
+            //$(window).on("scroll", handleEvent);
+        } else { // PC
+            $gnb.on("mouseenter mouseleave", handleEvent);
+            $header.on("mouseenter mouseleave", handleEvent);
+            $(window).on("scroll", handleEvent);
+        }
