@@ -7,14 +7,14 @@
     function handleEvent(e) {
         switch(e.type) {
         case "mouseenter":
-            $(this).addClass("on");
+            $(this).addClass(activeClass);
             break;
         case "mouseleave":
-            $(this).removeClass("on");
+            $(this).removeClass(activeClass);
             break;
         case "scroll":
             var sTop = $(this).scrollTop();
-            sTop > 0 ? header.addClass("on") : header.removeClass("on");
+            sTop > 0 ? $header.addClass(activeClass) : $header.removeClass(activeClass);
             break;
         }
     } 
