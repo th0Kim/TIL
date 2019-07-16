@@ -1,0 +1,62 @@
+@import "abstacts/variables";
+@import "abstacts/mixins";
+
+@import "base/base";
+
+// Nesting
+.box {
+    @include width-height-padding(300px, 300px, 20px);
+    @include pos-ab-center();
+
+    // 접두사 .box가 .box자신과 자식이 동일하므로 .box-inner = &-inner 동일한 뜻이 됨
+    &, &-inner { 
+        border: 3px solid $border-color;
+    }
+    //위 기본 정의 및에 미디어쿼리가 순차적으로 나와야한다.
+    //phone
+    @include mq('phone'){
+        border: none;
+        width: 100%;
+    }
+    //tablet
+    @include mq('tablet-land'){
+        border: 1px solid $border-color;
+    }
+    // desktop
+    @include mq('desktop-big'){
+        width: 600px;
+        border: 3px solid $border-color;
+    }
+
+    // .box-inner
+    &-inner {
+        @include width-height-padding(initial, 40px, 10px);
+
+        @include mq('phone'){
+            height: 10px;
+        }
+        @include mq('tablet-land'){
+            height: 30px;
+        }
+        @include mq('desktop-big'){
+            height: 50px;
+        }
+
+        background-color: $color-gray;
+
+        // .box-inner-title
+        &-title {
+            font-size: 20px;
+            color: $color-white;
+            background-color: rgba($color-black,0.5);
+            //phone
+            @include mq('phone'){
+                font-size: 40px;
+            }
+            //tablet
+            @include mq('tablet-land'){
+                font-size: 30px;
+            }
+        }
+    }
+}

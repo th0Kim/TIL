@@ -1,0 +1,9 @@
+// 변수
+$color-white : #ffffff;
+$color-black : #000000;
+$color-gray : #cccccc;
+$color-gray-light : #efefef;
+$color-red : #f00;
+$color-blue : #00f;
+
+$border-color: $color-blue; // border의 컬러가 변경될 수 있으니 별도 변수로 준다.

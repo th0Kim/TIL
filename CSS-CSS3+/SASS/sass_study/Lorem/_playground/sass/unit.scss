@@ -1,0 +1,22 @@
+
+// px : 고정 픽셀, 
+// em: 해당요소에 상속된 폰트 사이즈 기준으로 태그마다 다르게 적용, 
+// rem : 최상위 요소의 폰트 사이즈 기준(%)으로 모든 태그가 동일 적용, 
+// vw, vh,
+
+html {
+    // 기본 브라우저 폰트 사이즈 16px
+    // font-size: 10px; // 1rem
+    font-size: 62.5%;
+}
+#box1 {
+    font-size: 3rem; // 1em = 20px
+    width: 25rem; // 25em = 500px 
+    background-color: #aaa;
+}
+
+#box2 {
+    font-size: 2rem;
+    width: 25rem; // #box1과 같은 25em이지만 default font-size가 달라 적용값이 다르다.
+    background-color: #777;
+}

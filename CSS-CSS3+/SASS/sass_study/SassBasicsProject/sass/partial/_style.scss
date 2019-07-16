@@ -1,0 +1,6 @@
+// extend : 완전히 똑같은 속성값이 반복될 때 사용된다 -> @extend %name
+%boxShape  {
+    border-radius: 20px;
+    border: 3px solid #f00;
+    box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+  }

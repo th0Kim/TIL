@@ -1,0 +1,14 @@
+$color-blue: #69f;
+$color-red: #f88;
+$color-yellow: #9f9;
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    background-color: $color-blue;
+}
+.box {
+    color : $color-yellow;
+    background-color: $color-red;
+} 

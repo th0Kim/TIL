@@ -1,0 +1,44 @@
+// mixin
+@mixin width-height-padding($w, $h, $p) {
+    width: $w,;
+    height: $h;
+    padding: $p;
+}
+@mixin pos-ab-center() { // 정중앙
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin pos-ab-center-horizontal() { // 좌우 가운데
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin pos-ab-center-vertical() { // 상하 가운데
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//mixin을 응용한 미디어쿼리
+@mixin mq($screen-width) {
+    @if $screen-width == 'phone' {
+        @media screen and (max-width: 600px){
+            @content; // @include mq(){@content에 원하는 css코스 삽입가능}
+        }
+    }
+    @else if $screen-width == 'tablet-land' {
+        @media screen and (min-width: 601px) and (max-width: 899px){
+            @content; // @include mq(){@content에 원하는 css코스 삽입가능}
+        }
+    }
+    @else if $screen-width == 'desktop-big' {
+        @media screen and (min-width: 1201px){
+            @content; // @include mq(){@content에 원하는 css코스 삽입가능}
+        }
+    }
+    @else { // desktop
+        
+    }
+}

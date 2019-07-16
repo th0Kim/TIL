@@ -1,0 +1,17 @@
+// partial :  _파일명.scss의 내용을 @import하여 사용
+@import "mixins";
+@import "partial/style";
+/* 이 내용이 위 "mixins" = _mixins.scss 파일의 내용을 불러옴 : 중복소스 작성 방지, 오버 컴파일 방지
+@mixin fontSizeBgColor($fontSize: 20px, $gbColor: #fff) {
+    font-size: $fontSize;
+    background-color: $gbColor;
+  }
+@mixin linkStyle($textColor, $testDeco: none) {
+color: $textColor;
+text-decoration: $testDeco;
+}
+*/
+#test {
+    @include fontSizeBgColor(30px,#eaa);
+    @extend %boxShape;
+}

@@ -1,0 +1,33 @@
+body {
+  background-color: #ddd;
+}
+
+#box1 {
+  color: #ff0;
+  background-color: rgba(52, 183, 216, 0.8);
+  width: 100px;
+}
+
+#box2 {
+  color: #f00;
+  background-color: rgba(52, 183, 216, 0.8);
+  width: 100px;
+}
+
+#box3 {
+  color: #ff0;
+  background-color: rgba(52, 183, 216, 0.8);
+  width: 300px;
+}
+
+#box4 {
+  color: #f00;
+  background-color: rgba(52, 183, 216, 0.8);
+  width: 300px;
+}
+
+#box5 {
+  color: #0f0;
+  background-color: rgba(52, 183, 216, 0.8);
+}
+/*# sourceMappingURL=vars.css.map */

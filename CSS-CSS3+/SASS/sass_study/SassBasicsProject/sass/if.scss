@@ -1,0 +1,35 @@
+
+body{
+    margin: 50px;
+}
+
+// 1. mixin 생성
+@mixin textAndBgColor($textColor, $bgColor) {
+    color: $textColor;
+    background-color: $bgColor;
+}
+// 2. mixin if문 작성
+@mixin theme($moud) {
+    @if $moud == 'light' {
+        @include textAndBgColor( #333, #ff0 );
+    }
+    @else if $moud == 'dark' {
+        @include textAndBgColor( #fff, #000 );
+    }
+    @else if $moud == 'lovely' {
+        @include textAndBgColor( rgb(255, 7, 222), #eae );
+    }
+    @else {
+        @include textAndBgColor( #f00, #aaa );
+    }
+}
+// 3. if문 적용 css
+#box1 {
+    @include theme ('light');
+}
+#box2 {
+    @include theme ('dark');
+}
+#box3 {
+    @include theme ('noWhereThisTheme');
+}
